@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-[4rem] font-medium;
+    @apply font-phudu;
+  }
+  h2 {
+    @apply text-[3rem] font-medium;
+    @apply font-phudu;
+  }
+  p {
+    @apply font-lora;
+    @apply text-xl;
+  }
+}
