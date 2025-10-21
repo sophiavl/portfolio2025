@@ -4,15 +4,58 @@
 
 @layer base {
   h1 {
-    @apply text-[4rem] font-medium;
-    @apply font-phudu;
+    @apply text-[3.5rem] font-medium font-phudu;
   }
+
   h2 {
-    @apply text-[3rem] font-medium;
-    @apply font-phudu;
+    @apply text-[3rem] font-medium font-phudu;
   }
+  h3 {
+    @apply text-[1.7rem] font-medium font-phudu;
+  }
+
   p {
-    @apply font-lora;
-    @apply text-xl;
+    @apply text-[1rem] font-lora;
+  }
+
+  @media (min-width: 460px) {
+    h1 {
+      @apply text-[4rem];
+    }
+  }
+
+  @media (min-width: 660px) {
+    h1 {
+      @apply text-[6rem];
+    }
+    p {
+      @apply text-[1.1rem];
+    }
+    h2 {
+      @apply text-[4rem];
+    }
+  }
+
+  @media (min-width: 900px) {
+    h1 {
+      @apply text-[7.5rem];
+    }
+  }
+  @media (min-width: 1250px) {
+    h1 {
+      @apply text-[9rem];
+    }
+  }
+  @media (min-width: 1495px) {
+    h1 {
+      @apply text-[10rem];
+    }
+
+    h2 {
+      @apply text-[6rem];
+    }
+    p {
+      @apply text-[1.3rem];
+    }
   }
 }

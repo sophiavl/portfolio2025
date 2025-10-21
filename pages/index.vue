@@ -1,5 +1,8 @@
 <template>
-  <section ref="scroller">
+  <section
+    ref="scroller"
+    class="h-screen overflow-y-scroll snap-y snap-mandatory"
+  >
     <Hero class="snap-start h-screen"></Hero>
     <AboutMe class="snap-start h-screen"></AboutMe>
     <Portfolio class="snap-start h-screen"></Portfolio>
