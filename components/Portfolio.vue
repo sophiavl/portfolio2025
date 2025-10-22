@@ -1,6 +1,6 @@
 <template>
   <section class="h-screen p-10 bg-dark">
-    <h2 class="text-light">Portfolio</h2>
+    <h2 class="text-light">My work</h2>
   </section>
 </template>
 

@@ -58,4 +58,16 @@
       @apply text-[1.3rem];
     }
   }
+  @media (min-width: 1650px) {
+    h1 {
+      @apply text-[12rem];
+    }
+
+    h2 {
+      @apply text-[6rem];
+    }
+    p {
+      @apply text-[1.3rem];
+    }
+  }
 }

@@ -1,6 +1,7 @@
 :root {
-  --color-light: #e5e5e5;
+  --color-light: #eaeaea;
   --color-dark: #1b2422;
+  --color-section: #feffff;
 }
 
 body {

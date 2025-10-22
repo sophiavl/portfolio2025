@@ -1,12 +1,10 @@
 <template>
   <section class="h-screen bg-dark pt-10">
-    <Nav></Nav>
-
     <section class="overflow-x-hidden flex flex-col w-5/6 m-auto pt-16">
       <section class="flex flex-wrap items center pb-16">
         <h1
           ref="sophia"
-          class="text-light font-bold"
+          class="text-light font-bold mr-64"
         >
           Sophia
         </h1>

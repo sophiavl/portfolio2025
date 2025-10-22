@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        light: "#e5e5e5",
+        light: "#EAEAEA",
         dark: "#1b2422",
+        section: "#FEFFFF",
       },
       fontFamily: {
         phudu: ["Phudu", "sans-serif"],
