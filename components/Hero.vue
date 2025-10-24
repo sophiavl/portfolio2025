@@ -1,23 +1,24 @@
 <template>
   <section class="h-screen bg-dark pt-10">
     <section class="overflow-x-hidden flex flex-col w-5/6 m-auto pt-16">
-      <section class="flex flex-wrap items center pb-16">
+      <section class="flex items-start flex-col pb-12">
         <h1
           ref="sophia"
-          class="text-light font-bold mr-64"
+          class="text-light font-bold"
         >
           Sophia
         </h1>
-        <section class="flex">
+
+        <section class="flex flex-col lg:flex-row">
           <h1
             ref="van"
-            class="text-light font-bold"
+            class="text-light font-bold lg: pr-12"
           >
             van
           </h1>
           <h1
             ref="lieshout"
-            class="text-light font-bold pl-4 lg:pl-12"
+            class="text-light font-bold"
           >
             Lieshout
           </h1>
@@ -26,13 +27,13 @@
 
       <h3
         ref="webdev"
-        class="font-light text-light"
+        class="font-light text-light pl-4"
       >
         Web Developer
       </h3>
       <h3
         ref="uiux"
-        class="font-light text-light"
+        class="font-light text-light pl-4"
       >
         UI/UX designer
       </h3>
@@ -41,7 +42,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import gsap from "gsap";
 import Nav from "./Nav.vue";
 
@@ -51,33 +52,20 @@ const lieshout = ref(null);
 const webdev = ref(null);
 const uiux = ref(null);
 
-// onMounted(async () => {
-//   await nextTick(); // zeker weten dat refs gevuld zijn
+onMounted(async () => {
+  const tl = gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } });
 
-// const tl = gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } });
+  tl.fromTo(sophia.value, { x: "-100vw" }, { x: "1vw" })
+    .fromTo(van.value, { x: "-100vw" }, { x: "1vw" }, "-=0.5")
+    .fromTo(lieshout.value, { x: "-100vw" }, { x: "1vw" }, "-=0.5")
 
-// tl.fromTo(sophia.value, { x: "-100vw" }, { x: "10vw" })
-//   .fromTo(van.value, { x: "-100vw" }, { x: "40vw" }, "-=0.50")
-//   .fromTo(lieshout.value, { x: "-100vw" }, { x: "58vw" }, "-=0.50")
-//   .to(van.value, { y: -290 })
-//   .to(lieshout.value, { y: -575 }, "-=1");
-
-//   gsap.from([sophia.value, van.value, lieshout.value], {
-//     x: "-100vw",
-//     opacity: 1,
-//     duration: 1,
-//     stagger: 0.5,
-//     ease: "power3.out",
-//   });
-
-//   gsap.fromTo(
-//     [webdev.value, uiux.value],
-//     {
-//       opacity: 0,
-//     },
-//     { opacity: 1, duration: 1, delay: 2.5 }
-//   );
-// });
+    .fromTo(
+      [webdev.value, uiux.value],
+      { opacity: 0 },
+      { opacity: 1, duration: 1 },
+      "+=0.5"
+    );
+});
 </script>
 
 <style></style>

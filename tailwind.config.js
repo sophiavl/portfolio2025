@@ -14,6 +14,14 @@ export default {
         lora: ["Lora", "serif"],
       },
     },
+    screens: {
+      xs: "460px",
+      sm: "660px",
+      md: "900px",
+      lg: "1250px",
+      xl: "1495",
+      "2xl": "",
+    },
   },
   plugins: [],
 };
