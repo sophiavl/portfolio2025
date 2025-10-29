@@ -6,16 +6,16 @@
     <!-- <Nav></Nav> -->
     <Hero
       ref="hero"
-      class="snap-start h-screen"
+      class="snap-start h-lvh"
     ></Hero>
 
     <AboutMe
       ref="aboutme"
-      class="snap-start h-screen"
+      class="snap-start h-lvh"
     ></AboutMe>
     <Portfolio
       ref="portfolio"
-      class="snap-start h-screen"
+      class="snap-start h-lvh"
     ></Portfolio>
   </section>
 </template>
