@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-[5.5rem] font-medium font-phudu;
+    @apply text-[2.2rem] font-medium font-phudu;
   }
 
   h2 {
@@ -13,6 +13,9 @@
   h3 {
     @apply text-[1.7rem] font-medium font-phudu;
   }
+  h4 {
+    @apply text-[1.2rem] font-medium font-phudu;
+  }
 
   p {
     @apply text-[0.9rem] font-lora;
@@ -20,13 +23,13 @@
 
   @media (min-width: 460px) {
     h1 {
-      @apply text-[5.5rem];
+      @apply text-[2.7rem];
     }
   }
 
   @media (min-width: 660px) {
     h1 {
-      @apply text-[6rem];
+      @apply text-[3.9rem];
     }
     p {
       @apply text-[1.1rem];
@@ -38,13 +41,16 @@
 
   @media (min-width: 900px) {
     h1 {
-      @apply text-[7.5rem];
+      @apply text-[4.5rem];
     }
   }
 
   @media (min-width: 1250px) {
-    h1 {
+    /* h1 {
       @apply text-[9rem];
+    } */
+    h4 {
+      @apply text-[1.3rem];
     }
   }
 
@@ -55,6 +61,10 @@
 
     h2 {
       @apply text-[6rem];
+    }
+
+    h4 {
+      @apply text-[1.6rem];
     }
 
     p {

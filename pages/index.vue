@@ -1,18 +1,15 @@
 <template>
   <section
     ref="scroller"
-    class="snap-y snap-mandatory"
+    class="snap-y snap-mandatory justify-center"
   >
+    <Nav class="sticky top-0 z-50"></Nav>
     <!-- <Nav></Nav> -->
     <Hero
       ref="hero"
-      class="snap-start h-lvh"
+      class="snap-start h-lvh z-0"
     ></Hero>
 
-    <AboutMe
-      ref="aboutme"
-      class="snap-start h-lvh"
-    ></AboutMe>
     <Portfolio
       ref="portfolio"
       class="snap-start h-lvh"
