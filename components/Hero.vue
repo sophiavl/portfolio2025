@@ -38,7 +38,7 @@
 
     <section
       ref="flowerSection"
-      class="flex gap-6 justify-center mt-40"
+      class="flex gap-6 justify-center mt-40 sticky top-20 bg-dark z-50"
     >
       <img
         src="/images/bloemetje.svg"
@@ -164,7 +164,7 @@ onMounted(async () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: flower3.value, // start na de bloemen
-        start: "top center", // wanneer flower3 midden in beeld komt
+        start: "top 80%", // wanneer flower3 midden in beeld komt
         end: "bottom top", // einde iets verder op scroll
         scrub: 2, // vertraagde, vloeiende overgang (vergelijkbaar met 2 seconden)
       },
@@ -179,7 +179,7 @@ onMounted(async () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: intro1.value, // start na de bloemen
-        start: "top center", // wanneer flower3 midden in beeld komt
+        start: "top 90%", // wanneer flower3 midden in beeld komt
         end: "bottom top", // einde iets verder op scroll
         scrub: 2, // vertraagde, vloeiende overgang (vergelijkbaar met 2 seconden)
       },
