@@ -38,7 +38,7 @@
           </section>
           <img
             class="absolute bottom-0 left-[4%] w-14 h-auto md:w-24 lg:left-[10%]"
-            src="../public/boompje.png"
+            src="/public/images/boompje.png"
             alt="kerstboompje"
           />
         </header>
@@ -167,7 +167,7 @@
       <p class="pl-4 text-[#FFF9EB]">Made with ❤️ by Sophia</p>
       <a href="https://www.sophiavanlieshout.nl"
         ><img
-          src="../public/bloemetje.svg"
+          src="../public/images/bloemetje.svg"
           alt="bloemetje"
           width="20"
           height="20"
