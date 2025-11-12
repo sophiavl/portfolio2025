@@ -177,7 +177,7 @@
 </template>
 <script setup>
 import Overlay from "../components/Overlay.vue";
-const overlay = true;
+const overlay = false;
 </script>
 
 <style scoped>
