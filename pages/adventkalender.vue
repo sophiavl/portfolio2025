@@ -176,7 +176,7 @@
   </main>
 </template>
 <script setup>
-import Overlay from "./components/Overlay.vue";
+import Overlay from "../components/Overlay.vue";
 const overlay = true;
 </script>
 
