@@ -11,6 +11,19 @@ body {
 }
 
 @font-face {
+  font-family: "InstrumentSerif";
+  src: url("/fonts/InstrumentSerif-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CothamSans";
+  src: url("/fonts/CothamSans.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Phudu";
   src: url("/fonts/Phudu-Black.ttf") format("truetype");
   font-weight: 700;

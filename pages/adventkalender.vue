@@ -1,5 +1,7 @@
 <template>
-  <main class="flex flex-col h-screen justify-between items-center">
+  <main
+    class="flex flex-col h-screen justify-between items-center overflow-hidden"
+  >
     <Overlay v-if="overlay"></Overlay>
     <section class="h-[98%] w-screen border-black">
       <div class="flex h-[10%] w-screen">
@@ -183,5 +185,71 @@ const overlay = false;
 <style scoped>
 header {
   line-height: 1.5;
+}
+
+h1 {
+  font-family: "InstrumentSerif";
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.17rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-family: "CothamSans";
+  font-weight: normal;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-family: "CothamSans";
+}
+
+p {
+  font-family: "CothamSans";
+  font-size: 0.9rem;
+  color: #00131b;
+  text-align: center;
+}
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
 }
 </style>
