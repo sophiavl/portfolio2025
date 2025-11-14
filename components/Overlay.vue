@@ -56,6 +56,13 @@ const props = defineProps({
 function onClick() {
   emit("closeOverlay");
 }
+
+if (typeof window !== "undefined") {
+  window.addEventListener("touchstart", function onFirstTouch() {
+    document.body.classList.add("touch");
+    window.removeEventListener("touchstart", onFirstTouch);
+  });
+}
 </script>
 
 <style scoped>
@@ -67,8 +74,16 @@ a {
   transition: filter 1s ease; /* hier geef je de duur van 1s aan */
 }
 
-#link:hover {
+/* Desktop (hover) */
+body:not(.touch) #link:hover {
   filter: none;
+}
+
+/* Touch: verwijder blur direct bij click */
+body.touch #link:active,
+body.touch #link:focus {
+  filter: none;
+  transition: filter 0.3s ease;
 }
 
 header {
