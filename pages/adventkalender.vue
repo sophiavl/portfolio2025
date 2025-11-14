@@ -4,21 +4,25 @@
   >
     <Overlay
       v-if="overlay"
+      :date="date"
+      :text="text"
+      :link="link"
       @closeOverlay="overlay = false"
     ></Overlay>
     <section class="h-[97%] w-screen border-black">
       <div class="flex h-[10%] w-screen">
         <button
-          @click="overlay = !overlay"
+          @click="openOverlay('1 december', text1, link1)"
           class="w-1/3 h-full flex justify-center text-[#FEF9E1] items-center text-xl bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           1
         </button>
-        <div
+        <button
+          @click="openOverlay('2 december', text2, link2)"
           class="w-1/3 h-full flex justify-center text-[#FEF9E1] items-center text-xl bg-[#3B7B61] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           2
-        </div>
+        </button>
         <div
           class="w-1/3 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
@@ -186,6 +190,20 @@
 <script setup>
 import Overlay from "../components/Overlay.vue";
 import { ref } from "vue";
+const date = ref(""); // nieuwe reactive variabele
+const text = ref(""); // nieuwe reactive variabele
+const link = ref(""); // nieuwe reactive variabele
+
+const text1 =
+  "Welkom bij de eerste dag van mijn `Internet Blender Adventkalender`!<br> <br> Zelf word ik altijd erg enthousiast van het openmaken van kleine hokjes van adventkalenders, dit maakt december nóg beter dan dat december op zichzelf al is. Dit gun ik natuurlijk iedereen! Daarom wil ik samen met jullie aftellen tot kerst door jullie elke dag een leuk stukje internet mee te geven. <br> <br> Deze stukjes internet zullen in allerlei vormen komen. In ieder geval zullen het dingen zijn waarvan je op zijn minst denkt: ‘ah, das leuk’. Misschien denk je wel: ‘wow dit is echt geweldig, mijn dag is echt zoveel beter gemaakt nu!’ Maar dat zullen jullie vanzelf wel merken, als je elke dag terugkomt natuurlijk :) <br> <br>De eerste dag beginnen we met deze geweldige website, sorry voor de mensen met thalassofobie (oeps, spoiler).";
+const link1 = "https://neal.fun/deep-sea/";
+
+function openOverlay(selectedDate, selectedText, selectedLink) {
+  date.value = selectedDate;
+  text.value = selectedText;
+  link.value = selectedLink;
+  overlay.value = true;
+}
 
 const overlay = ref(false);
 </script>
@@ -215,7 +233,7 @@ h3 {
 
 p {
   font-family: "CothamSans";
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #00131b;
   text-align: center;
 }
