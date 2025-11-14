@@ -3,7 +3,7 @@
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center"
   >
     <section
-      class="relative w-[80%] h-[85%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-start items-center pt-8 p-[2rem]"
+      class="relative w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-start items-center pt-8 p-[1.5rem]"
     >
       <button
         @click="onClick"
@@ -28,7 +28,7 @@
         ></p>
       </section>
       <section
-        class="border-2 border-[#120000] rounded-xl w-[20rem] h-12 mt-12 flex justify-center items-center"
+        class="border-2 border-[#120000] bg-[#3B7B61] rounded-xl w-[20rem] h-12 mt-6 flex justify-center items-center"
       >
         <a
           class="text-[#120000] break-all"
