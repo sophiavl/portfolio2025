@@ -29,7 +29,7 @@
           3
         </div>
       </div>
-      <div class="flex h-[20%] w-screen">
+      <div class="flex h-[23%] w-screen">
         <div
           class="w-[20%] h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#1B4D3E] xl:w-[27.5%] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
@@ -37,7 +37,7 @@
         </div>
         <header
           v-if="!overlay"
-          class="relative flex flex-col h-full bg-[#FEF9E1] -z-10 w-[60%] pl-6 pt-6 justify-start items-center md:pl-12 xl:w-[45%]"
+          class="relative flex flex-col h-full bg-[#FEF9E1] -z-10 w-[60%] pt-[1rem] pl-[0.5rem] justify-start items-center md:pl-6 xl:w-[45%]"
         >
           <section class="flex flex-col items-start">
             <h2 class="text-[#120000] self-start">De Internet Blender</h2>
@@ -48,7 +48,7 @@
           </section>
           <img
             id="boom"
-            class="absolute -bottom-1 left-[1%] w-12 h-auto md:w-28 lg:left-[10%]"
+            class="absolute -bottom-1 left-[1%] w-14 h-auto md:w-28 lg:left-[10%]"
             src="/public/images/boompje.png"
             alt="kerstboompje"
           />
@@ -59,7 +59,7 @@
           5
         </div>
       </div>
-      <div class="flex h-[10%] w-screen">
+      <div class="flex h-[9%] w-screen">
         <div
           class="w-1/2 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
@@ -71,7 +71,7 @@
           7
         </div>
       </div>
-      <div class="flex h-[10%] w-screen">
+      <div class="flex h-[9%] w-screen">
         <div
           class="w-[15%] h-full flex justify-center items-center text-[#120000] text-xl bg-[#FEF9E1] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
@@ -113,7 +113,7 @@
           14
         </div>
       </div>
-      <div class="flex h-[21%] w-screen">
+      <div class="flex h-[20%] w-screen">
         <div
           class="w-3/5 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
@@ -236,6 +236,7 @@ p {
   font-family: "CothamSans";
   font-size: 0.9rem;
   color: #00131b;
+  text-align: center;
 }
 a,
 .green {
