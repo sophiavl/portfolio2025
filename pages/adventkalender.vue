@@ -37,7 +37,7 @@
         </div>
         <header
           v-if="!overlay"
-          class="relative flex flex-col h-full bg-[#FEF9E1] w-[60%] pl-6 pt-6 justify-start items-center md:pl-12 xl:w-[45%]"
+          class="relative flex flex-col h-full bg-[#FEF9E1] -z-10 w-[60%] pl-6 pt-6 justify-start items-center md:pl-12 xl:w-[45%]"
         >
           <section class="flex flex-col items-start">
             <h2 class="text-[#120000] self-start">De Internet Blender</h2>
@@ -47,7 +47,7 @@
             </h3>
           </section>
           <img
-            class="absolute bottom-0 left-[1%] w-12 h-auto md:w-28 lg:left-[10%]"
+            class="absolute -bottom-1 left-[1%] w-12 h-auto md:w-28 lg:left-[10%]"
             src="/public/images/boompje.png"
             alt="kerstboompje"
           />

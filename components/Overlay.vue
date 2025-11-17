@@ -63,6 +63,21 @@ if (typeof window !== "undefined") {
     window.removeEventListener("touchstart", onFirstTouch);
   });
 }
+
+if (typeof window !== "undefined") {
+  window.addEventListener("touchstart", () => {
+    document.body.classList.add("touch");
+  });
+
+  // Blur direct verwijderen op tap
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("#link");
+    if (link && document.body.classList.contains("touch")) {
+      link.style.filter = "none";
+      link.style.transition = "filter 0.3s ease";
+    }
+  });
+}
 </script>
 
 <style scoped>
@@ -80,11 +95,6 @@ body:not(.touch) #link:hover {
 }
 
 /* Touch: verwijder blur direct bij click */
-body.touch #link:active,
-body.touch #link:focus {
-  filter: none;
-  transition: filter 0.3s ease;
-}
 
 header {
   line-height: 1.5;
