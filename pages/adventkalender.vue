@@ -47,6 +47,7 @@
             </h3>
           </section>
           <img
+            id="boom"
             class="absolute -bottom-1 left-[1%] w-12 h-auto md:w-28 lg:left-[10%]"
             src="/public/images/boompje.png"
             alt="kerstboompje"
@@ -233,9 +234,8 @@ h3 {
 
 p {
   font-family: "CothamSans";
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #00131b;
-  text-align: center;
 }
 a,
 .green {
@@ -243,6 +243,12 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+@media only screen and (max-height: 750px) {
+  #boom {
+    max-height: 3rem;
+    width: auto;
+  }
 }
 
 @media only screen and (min-width: 490px) {
