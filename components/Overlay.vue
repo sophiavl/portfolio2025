@@ -46,6 +46,8 @@
 <script setup>
 import { defineEmits } from "vue";
 import { Icon } from "@iconify/vue";
+import { onMounted } from "vue";
+
 const emit = defineEmits(["closeOverlay"]);
 const props = defineProps({
   date: String,
@@ -78,6 +80,21 @@ if (typeof window !== "undefined") {
     }
   });
 }
+
+onMounted(() => {
+  const link = document.getElementById("link");
+  let unlocked = false;
+
+  link.addEventListener("click", (e) => {
+    // Eerste klik: blur verwijderen → maar NIET navigeren
+    if (!unlocked) {
+      e.preventDefault(); // voorkomt directe navigate
+      link.style.filter = "none";
+      unlocked = true; // volgende klik = wel navigeren
+    }
+    // Tweede klik: normaal naar de link
+  });
+});
 </script>
 
 <style scoped>
