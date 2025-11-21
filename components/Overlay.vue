@@ -3,7 +3,7 @@
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center"
   >
     <section
-      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[2rem]"
+      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[2rem] md:w-[80%] xl:w-[40%]"
     >
       <section class="flex flex-col justify-between">
         <header class="flex flex-col w-full items-start pb-4">
@@ -30,8 +30,9 @@
           ></p>
         </section>
       </section>
-      <section
-        class="bg-[#3B7B61] w-full h-10 mt-6 flex justify-center items-center"
+      <Vakje :link="link"><h1 class="vakje">1</h1></Vakje>
+      <!-- <section
+        class="bg-[#3B7B61] w-full h-24 mt-6 flex justify-center items-center"
       >
         <a
           class="break-all"
@@ -41,7 +42,7 @@
           target="_blank"
           ><p class="text-white-400">{{ link }}</p></a
         >
-      </section>
+      </section> -->
     </section>
   </section>
 </template>
@@ -50,6 +51,7 @@
 import { defineEmits } from "vue";
 import { Icon } from "@iconify/vue";
 import { onMounted } from "vue";
+import Vakje from "./Vakje.vue";
 
 const emit = defineEmits(["closeOverlay"]);
 const props = defineProps({
@@ -84,20 +86,20 @@ if (typeof window !== "undefined") {
   });
 }
 
-onMounted(() => {
-  const link = document.getElementById("link");
-  let unlocked = false;
+// onMounted(() => {
+//   const link = document.getElementById("link");
+//   let unlocked = false;
 
-  link.addEventListener("click", (e) => {
-    // Eerste klik: blur verwijderen → maar NIET navigeren
-    if (!unlocked) {
-      e.preventDefault(); // voorkomt directe navigate
-      link.style.filter = "none";
-      unlocked = true; // volgende klik = wel navigeren
-    }
-    // Tweede klik: normaal naar de link
-  });
-});
+//   link.addEventListener("click", (e) => {
+//     // Eerste klik: blur verwijderen → maar NIET navigeren
+//     if (!unlocked) {
+//       e.preventDefault(); // voorkomt directe navigate
+//       link.style.filter = "none";
+//       unlocked = true; // volgende klik = wel navigeren
+//     }
+//     // Tweede klik: normaal naar de link
+//   });
+// });
 </script>
 
 <style scoped>
@@ -145,6 +147,12 @@ p {
   line-height: 1.3;
   color: #00131b;
 }
+
+.vakje {
+  font-size: 5rem !important;
+  color: #fef9e1;
+}
+
 a,
 .green {
   text-decoration: none;
@@ -183,11 +191,9 @@ a,
     font-size: 1.1rem;
     line-height: 1.9 !important;
   }
-}
 
-@media only screen and (min-width: 1495px) {
-  :deep(p) {
-    font-size: 1.2rem !important;
+  h1 {
+    font-size: 3rem !important;
   }
 }
 </style>

@@ -13,31 +13,32 @@
       <div class="flex h-[10%] w-screen">
         <button
           @click="openOverlay('1 december', text1, link1)"
-          class="w-1/3 h-full flex justify-center text-[#FEF9E1] items-center text-xl bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-1/3 h-full flex justify-center items-center text-xl bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           1
         </button>
         <button
           @click="openOverlay('2 december', text2, link2)"
-          class="w-1/3 h-full flex justify-center text-[#FEF9E1] items-center text-xl bg-[#3B7B61] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-1/3 h-full flex justify-center items-center text-xl bg-[#3B7B61]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           2
         </button>
         <div
-          class="w-1/3 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-1/3 h-full flex justify-center items-center text-xl bg-[#551C22]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           3
         </div>
       </div>
       <div class="flex h-[23%] w-screen">
         <div
-          class="w-[20%] h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#1B4D3E] xl:w-[27.5%] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-[20%] h-full flex justify-center items-center text-xl bg-[#1B4D3E]/35 xl:w-[27.5%] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           4
         </div>
         <header
+          id="header"
           v-if="!overlay"
-          class="relative flex flex-col h-full bg-[#FEF9E1] -z-10 w-[60%] pt-[1rem] pl-[0.5rem] justify-start items-center md:pl-6 xl:w-[45%]"
+          class="relative flex flex-col h-full bg-[#FEF9E1]/35 -z-10 w-[60%] pt-[1rem] pl-[0.5rem] justify-center items-center md:pl-6 xl:w-[45%]"
         >
           <section class="flex flex-col items-start">
             <h2 class="text-[#120000] self-start">De Internet Blender</h2>
@@ -54,85 +55,85 @@
           />
         </header>
         <div
-          class="w-[20%] h-full flex justify-center text-[#FEF9E1] items-center text-xl bg-[#3B7B61] xl:w-[27.5%] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-[20%] h-full flex justify-center items-center text-xl bg-[#3B7B61]/35 xl:w-[27.5%] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           5
         </div>
       </div>
       <div class="flex h-[9%] w-screen">
         <div
-          class="w-1/2 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-1/2 h-full flex justify-center items-center text-xl bg-[#3B7B61]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           6
         </div>
         <div
-          class="w-1/2 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#1B4D3E] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-1/2 h-full flex justify-center items-center text-xl bg-[#551C22]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           7
         </div>
       </div>
       <div class="flex h-[9%] w-screen">
         <div
-          class="w-[15%] h-full flex justify-center items-center text-[#120000] text-xl bg-[#FEF9E1] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-[15%] h-full flex justify-center items-center text-xl bg-[#A31D1D]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           8
         </div>
         <div class="flex flex-col h-full w-[45%]">
           <div
-            class="flex justify-center items-center text-[#FEF9E1] text-xl h-1/2 bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+            class="flex justify-center items-center text-xl h-1/2 bg-[#1B4D3E]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
           >
             9
           </div>
           <div
-            class="flex justify-center items-center text-[#FEF9E1] text-xl h-1/2 bg-[#1B4D3E] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+            class="flex justify-center items-center text-xl h-1/2 bg-[#3B7B61]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
           >
             10
           </div>
         </div>
         <div
-          class="w-[40%] h-full flex justify-center text-[#120000] items-center text-xl bg-[#FEF9E1] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-[40%] h-full flex justify-center items-center text-xl bg-[#A31D1D]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           11
         </div>
       </div>
       <div class="flex h-[9%] w-screen">
         <div
-          class="h-full w-1/2 flex justify-center items-center text-[#FEF9E1] text-xl bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="h-full w-[30%] flex justify-center items-center text-xl bg-[#551C22]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           12
         </div>
         <div
-          class="w-1/4 flex justify-center items-center text-[#FEF9E1] text-xl bg-[#3B7B61] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-[30%] flex justify-center items-center text-xl bg-[#A31D1D]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           13
         </div>
 
         <div
-          class="w-1/4 h-full flex justify-center text-[#FEF9E1] items-center text-xl bg-[#1B4D3E] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-[40%] h-full flex justify-center items-center text-xl bg-[#1B4D3E]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           14
         </div>
       </div>
       <div class="flex h-[20%] w-screen">
         <div
-          class="w-3/5 h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-3/5 h-full flex justify-center items-center text-xl bg-[#1B4D3E]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           15
         </div>
         <div class="flex flex-col w-1/4">
           <div
-            class="h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+            class="h-full flex justify-center items-center text-xl bg-[#551C22]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
           >
             16
           </div>
           <div
-            class="h-1/2 flex justify-center items-center text-[#FEF9E1] text-xl bg-[#3B7B61] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+            class="h-1/2 flex justify-center items-center text-xl bg-[#3B7B61]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
           >
             17
           </div>
         </div>
         <div
-          class="w-1/5 h-full flex justify-center items-center text-[#120000] text-xl bg-[#FEF9E1] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="w-1/5 h-full flex justify-center items-center text-xl bg-[#A31D1D]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           18
         </div>
@@ -140,35 +141,35 @@
       <div class="flex h-[10%] w-screen">
         <div class="flex flex-col h-full w-1/3">
           <div
-            class="h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#1B4D3E] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+            class="h-full flex justify-center items-center text-xl bg-[#3B7B61]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
           >
             19
           </div>
           <div
-            class="h-full flex justify-center items-center text-[#FEF9E1] text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+            class="h-full flex justify-center items-center text-xl bg-[#A31D1D]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
           >
             20
           </div>
         </div>
         <div
-          class="h-full w-1/3 flex justify-center text-[#120000] items-center text-xl bg-[#FEF9E1] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="h-full w-1/3 flex justify-center items-center text-xl bg-[#551C22]/35 text-[#120000]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           21
         </div>
         <div
-          class="h-full w-1/3 flex justify-center items-center text-xl bg-[#551C22] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="h-full w-1/3 flex justify-center items-center text-xl bg-[#1B4D3E]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           22
         </div>
       </div>
       <div class="flex h-[10%] w-screen">
         <div
-          class="h-full w-1/2 flex justify-center items-center text-[#FEF9E1] text-xl bg-[#A31D1D] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="h-full w-1/2 flex justify-center items-center text-xl bg-[#1B4D3E]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           23
         </div>
         <div
-          class="h-full w-1/2 flex justify-center items-center text-[#FEF9E1] text-xl bg-[#3B7B61] shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
+          class="h-full w-1/2 flex justify-center items-center text-xl bg-[#A31D1D]/35 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]"
         >
           24
         </div>
@@ -238,6 +239,10 @@ p {
   color: #00131b;
   text-align: center;
 }
+
+div {
+  color: #fef9e1;
+}
 a,
 .green {
   text-decoration: none;
@@ -249,6 +254,10 @@ a,
   #boom {
     max-height: 3rem;
     width: auto;
+  }
+
+  #header {
+    justify-content: start;
   }
 }
 
@@ -288,14 +297,14 @@ a,
 
 @media only screen and (min-width: 1024px) {
   :deep(h1) {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   :deep(h2) {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
   :deep(h3) {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   :deep(p) {
