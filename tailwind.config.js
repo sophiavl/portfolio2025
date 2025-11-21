@@ -23,5 +23,5 @@ export default {
       "2xl": "",
     },
   },
-  plugins: [],
+  plugins: ["prettier-plugin-tailwindcss"],
 };
