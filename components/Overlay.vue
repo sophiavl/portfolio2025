@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center"
+    class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
   >
     <section
       class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[2rem] md:w-[80%] xl:w-[40%]"

@@ -1,10 +1,10 @@
 <template>
   <section class="min-h-screen flex flex-col bg-dark pt-10">
     <section class="flex flex-col w-5/6 m-auto pt-6 items-center">
-      <img
+      <!-- <img
         src="/public/images/bergen.jpg"
         alt="bergen"
-      />
+      /> -->
       <section class="flex items-start justify-center gap-3">
         <h1
           ref="sophia"
@@ -40,7 +40,7 @@
       </h3>
     </section>
 
-    <section class="wave-section">
+    <!-- <section class="wave-section">
       <svg
         ref="projectsMountain"
         viewBox="0 0 2029 2687"
@@ -77,11 +77,11 @@
           fill="currentcolor"
         />
       </svg>
-    </section>
+    </section> -->
 
     <section class="layer-container pt-48">
       <section class="relative w-[100%] h-auto">
-        <svg
+        <!-- <svg
           ref="projects-layer"
           class="layer"
           viewBox="0 0 2029 1527"
@@ -90,13 +90,13 @@
             d="M0 3439V498.492C0 498.492 384.914 -5.44825 685.76 0.0445789C979.257 5.40326 1057.28 474.289 1350.31 498.492C1632.26 521.781 2029 143.892 2029 143.892V3439H0Z"
             fill="#CCBCC3"
           />
-        </svg>
+        </svg> -->
         <h2 class="absolute right-[60rem] top-[8rem] text-red-400 z-10">
           projects
         </h2>
       </section>
 
-      <section class="relative w-[100%] h-auto">
+      <!-- <section class="relative w-[100%] h-auto">
         <svg
           ref="aboutme-layer"
           class="layer"
@@ -126,7 +126,7 @@
         <h2 class="absolute right-[60rem] top-[8rem] text-red-400 z-10">
           Contact
         </h2>
-      </section>
+      </section> -->
     </section>
     <section class="bg-[#1D1B1C] h-[10rem] w-full"></section>
   </section>

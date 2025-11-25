@@ -84,4 +84,33 @@ p {
   width: 100%;
   height: 100%;
 }
+
+@media only screen and (max-height: 750px) {
+  .wrapper {
+    width: 12rem;
+    height: 8rem;
+  }
+  p {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media only screen and (min-width: 660px) {
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+}
+@media only screen and (min-width: 1250px) {
+  p {
+    font-size: 1.1rem;
+    line-height: 1.9 !important;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+  }
+}
 </style>
