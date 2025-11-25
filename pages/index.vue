@@ -9,11 +9,11 @@
       ref="hero"
       class="snap-start h-lvh z-0"
     ></Hero>
-
+    <!-- 
     <Portfolio
       ref="portfolio"
       class="snap-start h-lvh"
-    ></Portfolio>
+    ></Portfolio> -->
   </section>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen flex flex-col bg-dark pt-10">
+  <section class="max-h-screen flex flex-col bg-dark pt-10">
     <section class="flex flex-col w-5/6 m-auto pt-6 items-center">
       <!-- <img
         src="/public/images/bergen.jpg"
@@ -38,6 +38,15 @@
       >
         UI/UX designer
       </h3>
+    </section>
+
+    <section class="flex flex-col h-4/5">
+      <section
+        id="layer1"
+        class="w-full h-[50%] bg-[#10108c]"
+      ></section>
+      <section class="w-full h-[40%] bg-[#806a23]"></section>
+      <section class="w-full h-[30%] bg-[#248023]"></section>
     </section>
 
     <!-- <section class="wave-section">
@@ -79,9 +88,9 @@
       </svg>
     </section> -->
 
-    <section class="layer-container pt-48">
+    <!-- <section class="layer-container pt-48">
       <section class="relative w-[100%] h-auto">
-        <!-- <svg
+        <svg
           ref="projects-layer"
           class="layer"
           viewBox="0 0 2029 1527"
@@ -90,13 +99,13 @@
             d="M0 3439V498.492C0 498.492 384.914 -5.44825 685.76 0.0445789C979.257 5.40326 1057.28 474.289 1350.31 498.492C1632.26 521.781 2029 143.892 2029 143.892V3439H0Z"
             fill="#CCBCC3"
           />
-        </svg> -->
+        </svg>
         <h2 class="absolute right-[60rem] top-[8rem] text-red-400 z-10">
           projects
         </h2>
-      </section>
+      </section> -->
 
-      <!-- <section class="relative w-[100%] h-auto">
+    <!-- <section class="relative w-[100%] h-auto">
         <svg
           ref="aboutme-layer"
           class="layer"
@@ -127,8 +136,7 @@
           Contact
         </h2>
       </section> -->
-    </section>
-    <section class="bg-[#1D1B1C] h-[10rem] w-full"></section>
+    <!-- </section> -->
   </section>
 </template>
 
@@ -237,6 +245,11 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+#layer1 {
+  border-top: 50px solid; /* dikte van de border */
+  border-image: url("/images/layer1.png") 30 round;
+  /* 30 = slice, 'round' = herhaling */
+}
 .wave-section {
   position: relative;
   width: 100%;

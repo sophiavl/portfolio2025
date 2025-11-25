@@ -542,11 +542,11 @@ const dayData = [
     #3b7b61
   );
   position: absolute;
-  top: -2px;
-  left: -2px;
+  top: 0;
+  left: 0;
   background-size: 400%;
   z-index: -1;
-  filter: blur(20px);
+  filter: blur(1px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing 10s linear infinite alternate;
