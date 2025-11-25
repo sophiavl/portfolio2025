@@ -66,7 +66,7 @@
         <header
           id="header"
           v-if="!overlay"
-          class="relative flex flex-col h-full bg-[#FEF9E1]/35 -z-10 w-[60%] pt-[1rem] pl-[0.5rem] justify-center items-center md:pl-6 xl:w-[45%]"
+          class="relative flex flex-col h-full bg-[#FEF9E1]/35 z-20 w-[60%] pt-[1rem] pl-[0.5rem] justify-center items-center md:pl-6 xl:w-[45%]"
         >
           <section class="flex flex-col items-start">
             <h2 class="text-[#120000] self-start">De Internet Blender</h2>
@@ -77,7 +77,7 @@
           </section>
           <img
             id="boom"
-            class="absolute -bottom-1 left-[1%] w-14 h-auto md:w-28 lg:left-[10%]"
+            class="absolute bottom-0 left-[1%] w-14 h-auto md:w-28 lg:left-[10%]"
             src="/public/images/boompje.png"
             alt="kerstboompje"
           />
@@ -102,8 +102,8 @@
           :class="[
             'w-1/2 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
             unlockedDay >= 6
-              ? 'bg-[#3B7B61]'
-              : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
+              ? 'bg-[#551C22]'
+              : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
           ]"
         >
           6
@@ -114,8 +114,8 @@
           :class="[
             'w-1/2 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
             unlockedDay >= 7
-              ? 'bg-[#551C22]'
-              : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
+              ? 'bg-[#3B7B61]'
+              : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
           ]"
         >
           7
@@ -545,10 +545,10 @@ const dayData = [
   top: 0;
   left: 0;
   background-size: 400%;
-  z-index: -1;
-  filter: blur(1px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  z-index: -2;
+  filter: blur(2px);
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
   animation: glowing 10s linear infinite alternate;
   opacity: 1;
   transition: opacity 0.5s;
@@ -580,6 +580,7 @@ const dayData = [
 
 header {
   line-height: 1.5;
+  z-index: 10;
 }
 
 h1 {
