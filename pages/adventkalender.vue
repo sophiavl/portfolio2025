@@ -389,7 +389,7 @@ onMounted(() => {
     setTimeout(() => {
       loader.style.display = "none"; // volledig weg
     }, 700);
-  }, 1000); // minimale duur zodat animatie zichtbaar is
+  }, 2500); // minimale duur zodat animatie zichtbaar is
 });
 
 const dayData = [
