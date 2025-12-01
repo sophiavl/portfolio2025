@@ -19,6 +19,7 @@
 <script setup>
 import { ref, onMounted, nextTick } from "vue";
 import { gsap } from "gsap";
+import { Analytics } from "@vercel/analytics/nuxt";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
