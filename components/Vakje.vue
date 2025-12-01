@@ -83,6 +83,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 20;
+  left: 14px;
   width: 19rem;
   cursor: grabbing;
   transform-origin: left center;
@@ -94,7 +95,7 @@ p {
   content: "";
   position: absolute;
   top: 0;
-  right: 1px;
+  right: 0;
   width: 8px;
   height: 100%;
   background-color: #8a1616;

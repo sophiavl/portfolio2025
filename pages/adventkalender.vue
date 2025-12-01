@@ -1,6 +1,6 @@
 <template>
   <main
-    class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#FFFDF4]"
+    class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#fffdf5]"
   >
     <div
       id="loader"
