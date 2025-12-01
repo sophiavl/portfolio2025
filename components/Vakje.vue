@@ -83,6 +83,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 20;
+  width: 19rem;
   cursor: grabbing;
   transform-origin: left center;
   transform-style: preserve-3d;
