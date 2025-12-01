@@ -3,7 +3,6 @@
     ref="scroller"
     class="snap-y snap-mandatory justify-center"
   >
-    <Nav class="sticky top-0 z-50"></Nav>
     <!-- <Nav></Nav> -->
     <Hero
       ref="hero"

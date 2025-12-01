@@ -1,7 +1,19 @@
 <template>
   <main
-    class="flex flex-col h-screen justify-between items-center overflow-hidden"
+    class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#FEF9E1]"
   >
+    <div
+      id="loader"
+      class="loader-screen"
+    >
+      <img
+        src="/images/boompje.png"
+        alt="kerstboom"
+        class="loader-tree"
+      />
+      <p class="loader-text">Kerstsfeer wordt geladen…</p>
+    </div>
+
     <Overlay
       v-if="overlay"
       :date="date"
@@ -9,45 +21,45 @@
       :link="link"
       @closeOverlay="overlay = false"
     ></Overlay>
-    <section class="h-[97%] w-screen border-black">
+    <section class="h-[96.5%] w-screen border-black">
       <div class="flex h-[10%] w-screen">
         <button
           :disabled="unlockedDay < 1"
           @click="openOverlay(dayData[0])"
           id="glow-on-hover"
           :class="[
-            'w-1/3 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 1
               ? 'bg-[#A31D1D] cursor-pointer'
-              : 'bg-[#A31D1D]/35 cursor-not-allowed opacity-70',
+              : 'bg-[#A31D1D]/35 cursor-not-allowed',
           ]"
         >
-          1
+          <p>1</p>
         </button>
         <button
           :disabled="unlockedDay < 2"
           @click="openOverlay(dayData[1])"
           :class="[
-            'w-1/3 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 2
               ? 'bg-[#3B7B61]'
-              : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
+              : 'bg-[#3B7B61]/35 cursor-not-allowed',
           ]"
         >
-          2
+          <p>2</p>
         </button>
 
         <button
           :disabled="unlockedDay < 3"
           @click="openOverlay(dayData[2])"
           :class="[
-            'w-1/3 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 3
               ? 'bg-[#551C22]'
               : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          3
+          <p>3</p>
         </button>
       </div>
       <div class="flex h-[23%] w-screen">
@@ -55,44 +67,48 @@
           :disabled="unlockedDay < 4"
           @click="openOverlay(dayData[3])"
           :class="[
-            'w-1/3 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 4
               ? 'bg-[#1B4D3E]'
               : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          4
+          <p>4</p>
         </button>
         <header
           id="header"
           v-if="!overlay"
-          class="relative flex flex-col h-full bg-[#FEF9E1]/35 z-20 w-[60%] pt-[1rem] pl-[0.5rem] justify-center items-center md:pl-6 xl:w-[45%]"
+          class="relative flex flex-col items-center h-full bg-[#FEF9E1] z-20 w-[60%] pt-[1rem] px-2 md:pl-6 xl:w-[45%]"
         >
-          <section class="flex flex-col items-start">
-            <h2 class="text-[#120000] self-start">De Internet Blender</h2>
+          <section
+            class="flex flex-col items-center text-center max-w-full z-20"
+          >
+            <h2 class="text-[#120000]">De Internet Blender</h2>
             <h1 class="text-[#120000]">Adventkalender</h1>
             <h3 class="absolute right-2 bottom-2 text-[#120000]">
               december 2025
             </h3>
           </section>
+
           <img
             id="boom"
-            class="absolute bottom-0 left-[1%] w-14 h-auto md:w-28 lg:left-[10%]"
+            class="absolute bottom-0 left-[1%] w-14 h-auto md:w-20 lg:w-24 pointer-events-none z-10"
             src="/public/images/boompje.png"
             alt="kerstboompje"
           />
         </header>
+
         <button
           :disabled="unlockedDay < 5"
           @click="openOverlay(dayData[4])"
           :class="[
-            'w-1/3 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 5
-              ? 'bg-[#3B7B61]'
-              : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
+              ? 'bg-[#1B4D3E]'
+              : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          5
+          <p>5</p>
         </button>
       </div>
       <div class="flex h-[9%] w-screen">
@@ -100,25 +116,25 @@
           :disabled="unlockedDay < 6"
           @click="openOverlay(dayData[5])"
           :class="[
-            'w-1/2 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/2 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 6
               ? 'bg-[#551C22]'
               : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          6
+          <p>6</p>
         </button>
         <button
           :disabled="unlockedDay < 7"
           @click="openOverlay(dayData[6])"
           :class="[
-            'w-1/2 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/2 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 7
               ? 'bg-[#3B7B61]'
               : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          7
+          <p>7</p>
         </button>
       </div>
       <div class="flex h-[9%] w-screen">
@@ -126,51 +142,51 @@
           :disabled="unlockedDay < 8"
           @click="openOverlay(dayData[7])"
           :class="[
-            'w-[15%] h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-[15%] h-full flex justify-center items-center text-xl border-[#120000]',
             unlockedDay >= 8
               ? 'bg-[#A31D1D]'
               : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          8
+          <p>8</p>
         </button>
         <div class="flex flex-col h-full w-[45%]">
           <button
             :disabled="unlockedDay < 9"
             @click="openOverlay(dayData[8])"
             :class="[
-              'flex justify-center items-center text-xl h-1/2 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+              'flex justify-center items-center text-xl h-1/2 ',
               unlockedDay >= 9
                 ? 'bg-[#1B4D3E]'
                 : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
             ]"
           >
-            9
+            <p>9</p>
           </button>
           <button
             :disabled="unlockedDay < 10"
             @click="openOverlay(dayData[9])"
             :class="[
-              'flex justify-center items-center text-xl h-1/2 shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+              'flex justify-center items-center text-xl h-1/2 ',
               unlockedDay >= 10
                 ? 'bg-[#3B7B61]'
                 : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
             ]"
           >
-            10
+            <p>10</p>
           </button>
         </div>
         <button
           :disabled="unlockedDay < 11"
           @click="openOverlay(dayData[10])"
           :class="[
-            'w-[40%] h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-[40%] h-full flex justify-center items-center text-xl ',
             unlockedDay >= 11
               ? 'bg-[#A31D1D]'
               : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          11
+          <p>11</p>
         </button>
       </div>
       <div class="flex h-[9%] w-screen">
@@ -178,38 +194,38 @@
           :disabled="unlockedDay < 12"
           @click="openOverlay(dayData[11])"
           :class="[
-            'w-[30%] h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-[30%] h-full flex justify-center items-center text-xl ',
             unlockedDay >= 12
               ? 'bg-[#551C22]'
               : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          12
+          <p>12</p>
         </button>
         <button
           :disabled="unlockedDay < 13"
           @click="openOverlay(dayData[12])"
           :class="[
-            'w-[30%] h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-[30%] h-full flex justify-center items-center text-xl ',
             unlockedDay >= 13
               ? 'bg-[#A31D1D]'
               : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          13
+          <p>13</p>
         </button>
 
         <button
           :disabled="unlockedDay < 14"
           @click="openOverlay(dayData[13])"
           :class="[
-            'w-[40%] h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-[40%] h-full flex justify-center items-center text-xl ',
             unlockedDay >= 14
               ? 'bg-[#1B4D3E]'
               : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          14
+          <p>14</p>
         </button>
       </div>
       <div class="flex h-[20%] w-screen">
@@ -217,51 +233,51 @@
           :disabled="unlockedDay < 15"
           @click="openOverlay(dayData[14])"
           :class="[
-            'w-3/5 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-3/5 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 15
               ? 'bg-[#1B4D3E]'
               : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          15
+          <p>15</p>
         </button>
         <div class="flex flex-col w-1/4">
           <button
             :disabled="unlockedDay < 16"
             @click="openOverlay(dayData[15])"
             :class="[
-              'h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+              'h-full flex justify-center items-center text-xl ',
               unlockedDay >= 16
                 ? 'bg-[#551C22]'
                 : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
             ]"
           >
-            16
+            <p>16</p>
           </button>
           <button
             :disabled="unlockedDay < 17"
             @click="openOverlay(dayData[16])"
             :class="[
-              'h-1/2 flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+              'h-1/2 flex justify-center items-center text-xl ',
               unlockedDay >= 17
                 ? 'bg-[#3B7B61]'
                 : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
             ]"
           >
-            17
+            <p>17</p>
           </button>
         </div>
         <button
           :disabled="unlockedDay < 18"
           @click="openOverlay(dayData[17])"
           :class="[
-            'w-1/5 h-full flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'w-1/5 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 18
               ? 'bg-[#A31D1D]'
               : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          18
+          <p>18</p>
         </button>
       </div>
       <div class="flex h-[10%] w-screen">
@@ -270,50 +286,50 @@
             :disabled="unlockedDay < 19"
             @click="openOverlay(dayData[18])"
             :class="[
-              'h-1/2 flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+              'h-1/2 flex justify-center items-center text-xl ',
               unlockedDay >= 19
                 ? 'bg-[#3B7B61]'
                 : 'bg-[#3B7B61]/40 cursor-not-allowed opacity-70',
             ]"
           >
-            19
+            <p>19</p>
           </button>
           <button
             :disabled="unlockedDay < 20"
             @click="openOverlay(dayData[19])"
             :class="[
-              'h-1/2 flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+              'h-1/2 flex justify-center items-center text-xl ',
               unlockedDay >= 20
                 ? 'bg-[#A31D1D]'
                 : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
             ]"
           >
-            20
+            <p>20</p>
           </button>
         </div>
         <button
           :disabled="unlockedDay < 21"
           @click="openOverlay(dayData[20])"
           :class="[
-            'h-full w-1/3 flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'h-full w-1/3 flex justify-center items-center text-xl ',
             unlockedDay >= 21
               ? 'bg-[#551C22]'
               : 'bg-[#551C22]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          21
+          <p>21</p>
         </button>
         <button
           :disabled="unlockedDay < 22"
           @click="openOverlay(dayData[21])"
           :class="[
-            'h-full w-1/3 flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'h-full w-1/3 flex justify-center items-center text-xl ',
             unlockedDay >= 22
               ? 'bg-[#1B4D3E]'
               : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          22
+          <p>22</p>
         </button>
       </div>
       <div class="flex h-[10%] w-screen">
@@ -321,45 +337,35 @@
           :disabled="unlockedDay < 23"
           @click="openOverlay(dayData[22])"
           :class="[
-            'h-full w-1/2 flex justify-center items-center text-xl  shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'h-full w-1/2 flex justify-center items-center text-xl  ',
             unlockedDay >= 23
               ? 'bg-[#1B4D3E]'
               : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          23
+          <p>23</p>
         </button>
         <button
           :disabled="unlockedDay < 24"
           @click="openOverlay(dayData[23])"
           :class="[
-            'h-full w-1/2 flex justify-center items-center text-xl shadow-[inset_0_0_7px_1px_rgba(0,0,0,0.25)]',
+            'h-full w-1/2 flex justify-center items-center text-xl ',
             unlockedDay >= 24
               ? 'bg-[#A31D1D]'
               : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
           ]"
         >
-          24
+          <p>24</p>
         </button>
       </div>
     </section>
-    <footer
-      class="flex h-[3%] w-screen justify-center items-center bg-[#FEF9E1]"
-    >
-      <p class="pl-4 !text-[0.7rem] text-[#FFF9EB]">Made with ❤️ by Sophia</p>
-      <a href="https://www.sophiavanlieshout.nl"
-        ><img
-          src="../public/images/bloemetje.svg"
-          alt="bloemetje"
-          width="20"
-          height="20"
-      /></a>
-    </footer>
+    <Footer></Footer>
   </main>
 </template>
 <script setup>
 import Overlay from "../components/Overlay.vue";
 import { ref } from "vue";
+import Footer from "~/components/Footer.vue";
 const date = ref(""); // nieuwe reactive variabele
 const text = ref(""); // nieuwe reactive variabele
 const link = ref(""); // nieuwe reactive variabele
@@ -374,12 +380,23 @@ function openOverlay(dayObject) {
 }
 const overlay = ref(false);
 const unlockedDay = ref(1);
+onMounted(() => {
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+    loader.classList.add("fade-out");
+
+    setTimeout(() => {
+      loader.style.display = "none"; // volledig weg
+    }, 700);
+  }, 3000); // minimale duur zodat animatie zichtbaar is
+});
 
 const dayData = [
   {
     day: 1,
     date: "1 december",
-    text: "Welkom bij de eerste dag van mijn `Internet Blender Adventkalender`!<br> <br> Zelf word ik altijd erg enthousiast van het openmaken van kleine hokjes van adventkalenders, dit maakt december nóg beter dan dat december op zichzelf al is. Dit gun ik natuurlijk iedereen! Daarom wil ik samen met jullie aftellen tot kerst door jullie elke dag een leuk stukje internet mee te geven. <br> <br> Deze stukjes internet zullen in allerlei vormen komen. In ieder geval zullen het dingen zijn waarvan je op zijn minst denkt: ‘ah, das leuk’. Misschien denk je wel: ‘wow dit is echt geweldig, mijn dag is echt zoveel beter gemaakt nu!’ Maar dat zullen jullie vanzelf wel merken, als je elke dag terugkomt natuurlijk :) <br> <br>De eerste dag beginnen we met deze geweldige website, sorry voor de mensen met thalassofobie (oeps, spoiler).",
+    text: "Welkom bij de eerste dag van mijn <strong>Internet Blender Adventkalender</strong>!<br> <br> Zelf word ik altijd erg enthousiast van adventkalenders. Elke dag een vakje open maken maakt december nóg beter dan dat december op zichzelf al is. Deze blijdschap wil ik graag met jullie delen en samen met jullie aftellen tot kerst. Dit ga ik doen door jullie elke dag een leuk stukje internet mee te geven! <br> <br> Deze stukjes internet zullen in allerlei vormen komen. In ieder geval zullen het dingen zijn waarvan je op zijn minst denkt: ‘ah, das leuk’. Misschien denk je wel: ‘wow dit is echt geweldig, mijn dag is echt zoveel beter gemaakt nu!’ Maar dat zullen jullie vanzelf wel merken, als je elke dag terugkomt natuurlijk :) <br> <br>De eerste dag beginnen we met deze geweldige website, alvast sorry voor de mensen met thalassofobie.",
     link: "https://neal.fun/deep-sea/",
   },
   {
@@ -525,67 +542,59 @@ const dayData = [
 
 <style scoped>
 #glow-on-hover {
-  cursor: pointer;
   position: relative;
-  background-color: #551c22;
-  z-index: 0;
+  z-index: 0; /* tekst boven pseudo-element */
+  overflow: hidden; /* optioneel: voorkomt overflow van blur */
 }
 
-#glow-on-hover:before {
+/* Glow layer */
+#glow-on-hover::before {
   content: "";
-  background: repeating-linear-gradient(
-    45deg,
-    #3b7b61,
-    #ff0000,
-    #3b7b61,
-    #ff0000,
-    #3b7b61
-  );
   position: absolute;
   top: 0;
   left: 0;
-  background-size: 400%;
-  z-index: -2;
-  filter: blur(2px);
-  width: calc(100% + 3px);
-  height: calc(100% + 3px);
-  animation: glowing 10s linear infinite alternate;
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-
-#glow-on-hover:active:after {
-  background: transparent;
-}
-
-#glow-on-hover:after {
-  z-index: -1;
-  content: "";
-  position: absolute;
   width: 100%;
   height: 100%;
-  background: #551c22;
-  left: 0;
-  top: 0;
+
+  background: linear-gradient(
+    -45deg,
+    #a31d1d,
+    #b65d66,
+    #a31d1d,
+    #b65d66,
+    #a31d1d,
+    #b65d66
+  );
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite reverse;
+  filter: blur(4px);
+  z-index: -1; /* glow onder de content */
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
 }
 
-@keyframes glowing {
+@keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
   100% {
-    background-position: 400% 50%;
+    background-position: 0% 50%;
   }
 }
 
 header {
   line-height: 1.5;
   z-index: 10;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 h1 {
   font-family: "InstrumentSerif";
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: bold;
   letter-spacing: 0.17rem;
 }
@@ -603,9 +612,60 @@ h3 {
 
 p {
   font-family: "CothamSans";
-  font-size: 0.9rem;
-  color: #00131b;
+  font-size: 1.25rem;
+  color: #fef9e1;
   text-align: center;
+}
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  background: #000; /* zwart scherm */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* boven alles */
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.loader-tree {
+  width: 100px;
+  height: auto;
+  margin-bottom: 1rem;
+  animation: treePulse 1.5s infinite ease-in-out;
+}
+
+.loader-text {
+  color: white;
+  font-family: "InstrumentSerif", serif;
+  font-size: 1.8rem !important;
+  letter-spacing: 0.05rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+/* Klein pulse effect voor fun */
+@keyframes treePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Fade-out class (wordt toegevoegd in JS/Vue) */
+.loader-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }
 
 div {
@@ -619,11 +679,6 @@ a,
   padding: 3px;
 }
 @media only screen and (max-height: 750px) {
-  #boom {
-    max-height: 3rem;
-    width: auto;
-  }
-
   #header {
     justify-content: start;
   }
@@ -640,10 +695,6 @@ a,
   :deep(h3) {
     font-size: 1.1rem;
   }
-
-  :deep(p) {
-    font-size: 0.8rem;
-  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -654,18 +705,18 @@ a,
   :deep(h2) {
     font-size: 1.4rem;
   }
-  :deep(h3) {
-    font-size: 1.1rem;
+  h3 {
+    font-size: 1.1rem !important;
   }
 
-  :deep(p) {
-    font-size: 0.8rem;
+  p {
+    font-size: 1.5rem !important;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   :deep(h1) {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   :deep(h2) {
@@ -676,7 +727,7 @@ a,
   }
 
   :deep(p) {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
 }
 </style>

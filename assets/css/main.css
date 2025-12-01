@@ -1,12 +1,15 @@
 :root {
-  --color-light: #eaeaea;
+  --color-light: #fff6f2;
   --color-dark: #1b2422;
   --color-section: #feffff;
+  --color-lightPink: #b691a1;
+  --color-middlePink: #824f63;
+  --color-darkPink: #30041a;
 }
 
 body {
   background-color: var(--color-light);
-  color: var(--color-dark);
+  color: var(--color-darkPink);
   height: 100vh;
 }
 
@@ -83,6 +86,10 @@ body {
   src: url("/fonts/Lora-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
+}
+strong {
+  color: inherit; /* neemt dezelfde kleur als de rest van de tekst */
+  font-weight: 800; /* zelf bepalen hoe vet */
 }
 
 html {

@@ -8,13 +8,13 @@
   }
 
   h2 {
-    @apply text-[4rem] font-medium font-phudu;
+    @apply text-[2.5rem] font-medium font-phudu;
   }
   h3 {
     @apply text-[1.7rem] font-medium font-phudu;
   }
   h4 {
-    @apply text-[1rem] font-medium font-phudu;
+    @apply text-[1.2rem] font-medium font-phudu;
   }
 
   p {
@@ -35,7 +35,7 @@
       @apply text-[1.1rem];
     }
     h2 {
-      @apply text-[4rem];
+      @apply text-[3rem];
     }
   }
 
@@ -59,10 +59,6 @@
       @apply text-[10rem];
     }
 
-    h2 {
-      @apply text-[6rem];
-    }
-
     h4 {
       @apply text-[1.6rem];
     }
@@ -74,11 +70,7 @@
 
   @media (min-width: 1650px) {
     h1 {
-      @apply text-[12rem];
-    }
-
-    h2 {
-      @apply text-[6rem];
+      @apply text-[10rem];
     }
 
     p {

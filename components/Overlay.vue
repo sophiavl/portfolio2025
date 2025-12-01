@@ -3,7 +3,7 @@
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
   >
     <section
-      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[2rem] md:w-[80%] xl:w-[40%]"
+      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[2rem] md:w-[80%] xl:w-[40%] pb-24"
     >
       <section class="flex flex-col justify-between">
         <header class="flex flex-col w-full items-start pb-4">
@@ -23,7 +23,7 @@
           </section>
           <div class="w-[95%] h-[0.05rem] bg-[#120000]/20"></div>
         </header>
-        <section class="flex flex-col gap-4">
+        <section class="flex flex-col pb-2">
           <p
             class="text-[#00131B] text-left"
             v-html="text"
@@ -31,18 +31,6 @@
         </section>
       </section>
       <Vakje :link="link"><h1 class="vakje">1</h1></Vakje>
-      <!-- <section
-        class="bg-[#3B7B61] w-full h-24 mt-6 flex justify-center items-center"
-      >
-        <a
-          class="break-all"
-          id="link"
-          :href="link"
-          rel="noopener noreferrer"
-          target="_blank"
-          ><p class="text-white-400">{{ link }}</p></a
-        >
-      </section> -->
     </section>
   </section>
 </template>
@@ -174,7 +162,7 @@ a,
   }
 
   p {
-    font-size: 0.75rem !important;
+    font-size: 0.8rem !important;
   }
 }
 
@@ -188,8 +176,8 @@ a,
 }
 @media only screen and (min-width: 1250px) {
   p {
-    font-size: 1.1rem;
-    line-height: 1.9 !important;
+    font-size: 0.9rem;
+    line-height: 1.4 !important;
   }
 
   h1 {
