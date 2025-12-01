@@ -83,8 +83,7 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 20;
-  left: 14px;
-  width: 19rem;
+  width: 13rem;
   cursor: grabbing;
   transform-origin: left center;
   transform-style: preserve-3d;
@@ -115,6 +114,13 @@ p {
 }
 
 @media only screen and (max-height: 750px) {
+  .wrapper {
+    width: 12rem;
+    height: 8rem;
+  }
+  .front {
+    width: 12rem;
+  }
   p {
     font-size: 0.75rem !important;
   }
@@ -124,15 +130,19 @@ p {
   p {
     font-size: 1rem !important;
   }
-
+  .front {
+    left: 13px;
+    width: 18rem;
+  }
+  .wrapper {
+    width: 18rem;
+    height: 8rem;
+  }
   .content {
     left: 1rem;
   }
 }
 @media only screen and (min-width: 660px) and (max-width: 900px) {
-  .content {
-    left: 0.25rem;
-  }
 }
 
 @media only screen and (min-width: 900px) {
