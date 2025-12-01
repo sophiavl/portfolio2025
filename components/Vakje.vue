@@ -34,13 +34,28 @@ const doorRef = ref(null);
 function openDoor() {
   isOpen.value = true;
 
+  // Deur draait
   gsap.to(doorRef.value, {
-    rotateY: -110,
+    rotateY: -105,
     duration: 2,
     ease: "power3.inOut",
     transformOrigin: "left-center",
     boxShadow: "0 10px 20px rgba(0,0,0,0.25)",
     z: -30,
+  });
+
+  // Pseudo-element roteren en meteen zichtbaar maken
+  gsap.to(doorRef.value, {
+    "--after-rotate": "90deg",
+    duration: 1,
+    ease: "power3.inOut",
+  });
+
+  // Snelle opacity fade-in
+  gsap.to(doorRef.value, {
+    "--after-opacity": 1,
+    duration: 2, // sneller dan deur animatie
+    ease: "power3.inOut",
   });
 }
 </script>
@@ -77,25 +92,12 @@ p {
 .front::before {
   content: "";
   position: absolute;
-  top: 1px;
-  left: 0; /* NIET NEGATIEF */
-  width: 10px;
-  height: 98%;
-  background-color: #a31d1d;
-  transform-origin: right center;
-  transform: rotateY(90deg);
-}
-
-/* RECHTER ZIJDE */
-.front::after {
-  content: "";
-  position: absolute;
-  top: 2;
-  right: -10px; /* NIET NEGATIEF */
+  top: 0;
+  right: 1px;
   width: 8px;
-  height: 99%;
+  height: 100%;
   background-color: #8a1616;
-  transform-origin: left center;
+  transform-origin: right center;
   transform: rotateY(90deg);
 }
 
@@ -112,11 +114,11 @@ p {
 
 @media only screen and (max-height: 750px) {
   .wrapper {
-    width: 13rem;
+    width: 12rem;
     height: 8rem;
   }
   p {
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
 }
 
@@ -128,9 +130,20 @@ p {
     width: 18rem;
     height: 8rem;
   }
+  .content {
+    left: 1rem;
+  }
+}
+@media only screen and (min-width: 660px) and (max-width: 900px) {
+  .content {
+    left: 0.25rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
+  content {
+    left: 0;
+  }
 }
 @media only screen and (min-width: 1250px) {
   p {

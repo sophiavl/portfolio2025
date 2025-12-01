@@ -3,10 +3,10 @@
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
   >
     <section
-      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[2rem] md:w-[80%] xl:w-[40%] pb-24"
+      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
     >
       <section class="flex flex-col justify-between">
-        <header class="flex flex-col w-full items-start pb-4">
+        <header class="flex flex-col w-full items-start pb-2">
           <section class="flex w-full justify-between">
             <h1 class="text-[#00131B]">{{ date }}</h1>
             <button
@@ -107,7 +107,7 @@ body:not(.touch) #link:hover {
 /* Touch: verwijder blur direct bij click */
 
 header {
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 h1 {
@@ -130,7 +130,7 @@ h3 {
 
 p {
   font-family: "Montserrat" !important;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
   font-weight: 300 !important;
   line-height: 1.3;
   color: #00131b;
@@ -151,7 +151,7 @@ a,
 
 @media only screen and (max-height: 750px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   h2 {
@@ -160,9 +160,8 @@ a,
   h3 {
     font-size: 0.9rem;
   }
-
   p {
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
   }
 }
 

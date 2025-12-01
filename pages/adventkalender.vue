@@ -389,7 +389,7 @@ onMounted(() => {
     setTimeout(() => {
       loader.style.display = "none"; // volledig weg
     }, 700);
-  }, 3000); // minimale duur zodat animatie zichtbaar is
+  }, 1000); // minimale duur zodat animatie zichtbaar is
 });
 
 const dayData = [
@@ -612,7 +612,8 @@ h3 {
 
 p {
   font-family: "CothamSans";
-  font-size: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   color: #fef9e1;
   text-align: center;
 }
@@ -681,6 +682,10 @@ a,
 @media only screen and (max-height: 750px) {
   #header {
     justify-content: start;
+  }
+
+  #boom {
+    width: 2.5rem;
   }
 }
 
