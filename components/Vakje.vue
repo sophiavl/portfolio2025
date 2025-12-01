@@ -115,10 +115,6 @@ p {
 }
 
 @media only screen and (max-height: 750px) {
-  .wrapper {
-    width: 12rem;
-    height: 8rem;
-  }
   p {
     font-size: 0.75rem !important;
   }
