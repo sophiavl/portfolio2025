@@ -4,7 +4,7 @@
   >
     <section class="flex items-center gap-1">
       <img
-        src="/images/bloemetje.png"
+        src="/images/bloemetje.svg"
         alt="bloemetje"
         class="max-w-[2rem]"
       />

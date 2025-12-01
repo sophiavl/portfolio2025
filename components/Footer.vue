@@ -5,7 +5,7 @@
     <p class="footertext">Made with ‪‪❤︎‬ by Sophia</p>
     <a href="https://www.sophiavanlieshout.nl"
       ><img
-        src="../public/images/bloemetje.png"
+        src="../public/images/bloemetje.svg"
         alt="bloemetje"
         width="17"
         height="17"
