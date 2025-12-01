@@ -1,6 +1,6 @@
 <template>
   <main
-    class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#FEF9E1]"
+    class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#FFFDF4]"
   >
     <div
       id="loader"
@@ -78,7 +78,7 @@
         <header
           id="header"
           v-if="!overlay"
-          class="relative flex flex-col items-center h-full bg-[#FEF9E1] z-20 w-[60%] pt-[1rem] px-2 md:pl-6 xl:w-[45%]"
+          class="relative flex flex-col items-center h-full bg-[#FFFDF4] z-20 w-[60%] pt-[1rem] px-2 md:pl-6 xl:w-[45%]"
         >
           <section
             class="flex flex-col items-center text-center max-w-full z-20"
@@ -612,9 +612,9 @@ h3 {
 
 p {
   font-family: "CothamSans";
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  color: #fef9e1;
+  color: #fffdf4;
   text-align: center;
 }
 .loader-screen {
@@ -670,7 +670,7 @@ p {
 }
 
 div {
-  color: #fef9e1;
+  color: #fffdf4;
 }
 a,
 .green {
@@ -686,6 +686,10 @@ a,
 
   #boom {
     width: 2.5rem;
+  }
+
+  p {
+    font-size: 1.1rem !important;
   }
 }
 
@@ -703,11 +707,11 @@ a,
 }
 
 @media only screen and (min-width: 768px) {
-  :deep(h1) {
+  h1 {
     font-size: 2.8rem;
   }
 
-  :deep(h2) {
+  h2 {
     font-size: 1.4rem;
   }
   h3 {
@@ -715,7 +719,7 @@ a,
   }
 
   p {
-    font-size: 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
 
@@ -731,8 +735,8 @@ a,
     font-size: 1.3rem;
   }
 
-  :deep(p) {
-    font-size: 1.4rem;
+  p {
+    font-size: 1rem !important;
   }
 }
 </style>

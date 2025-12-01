@@ -1,8 +1,8 @@
 <template>
   <footer
-    class="flex h-[3.5%] w-screen justify-center items-center gap-2 bg-[#FEF9E1]"
+    class="flex h-[3.5%] w-screen justify-center items-center gap-2 bg-[#FFFDF4]"
   >
-    <p>Made with ‪‪❤︎‬ by Sophia</p>
+    <p class="footertext">Made with ‪‪❤︎‬ by Sophia</p>
     <a href="https://www.sophiavanlieshout.nl"
       ><img
         src="../public/images/bloemetje.png"
@@ -15,26 +15,26 @@
 
 <style scoped>
 p {
-  padding-left: 0.9rem;
   color: #00131b;
   font-family: "CothamSans";
-
-  font-size: 0.8rem;
-}
-.wrapper {
+  font-size: 0.75rem !important;
+  font-weight: 200 !important;
 }
 
 @media only screen and (min-width: 660px) {
+  p {
+    font-size: 0.8rem !important;
+  }
 }
 
 @media only screen and (min-width: 900px) {
   p {
-    font-size: 0.9rem !important;
+    font-size: 0.8rem !important;
   }
 }
 @media only screen and (min-width: 1250px) {
   p {
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
   }
 }
 </style>
