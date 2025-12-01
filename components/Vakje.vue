@@ -124,10 +124,7 @@ p {
   p {
     font-size: 1rem !important;
   }
-  .wrapper {
-    width: 18rem;
-    height: 8rem;
-  }
+
   .content {
     left: 1rem;
   }
