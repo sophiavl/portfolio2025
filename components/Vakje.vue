@@ -107,7 +107,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: #f2eee7;
-  border: 4px inset;
+  border: 4px inset #f2eee7;
   width: 100%;
   height: 100%;
 }
