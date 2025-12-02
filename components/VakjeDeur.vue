@@ -8,7 +8,7 @@
         id="link"
         :href="link"
         target="_blank"
-        ><p>{{ link }}</p></a
+        ><p class="text-center">Het blijft spannend tot je hier klikt...</p></a
       >
     </div>
     <div
@@ -16,7 +16,7 @@
       ref="doorRef"
       @click="openDoor"
     >
-      <slot></slot>
+      <h1 class="vakje">{{ day }}</h1>
     </div>
   </div>
 </template>
@@ -25,6 +25,7 @@
 import { defineProps } from "vue";
 import gsap from "gsap";
 const props = defineProps({
+  day: Number,
   link: String,
 });
 
@@ -74,6 +75,13 @@ p {
   font-weight: 300 !important;
   line-height: 1.3;
   color: #00131b;
+}
+
+.vakje {
+  font-size: 3rem !important;
+  color: #fef9e1;
+  font-family: "InstrumentSerif";
+  font-weight: bold;
 }
 .front {
   position: absolute;

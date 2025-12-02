@@ -19,14 +19,17 @@
       :date="date"
       :text="text"
       :link="link"
+      :day="day"
       @closeOverlay="overlay = false"
     ></Overlay>
-    <section class="h-[96.5%] w-screen border-black">
+    <section
+      v-if="mounted"
+      class="h-[96.5%] w-screen border-black"
+    >
       <div class="flex h-[10%] w-screen">
         <button
           :disabled="unlockedDay < 1"
           @click="openOverlay(dayData[0])"
-          id="glow-on-hover"
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 1
@@ -39,10 +42,11 @@
         <button
           :disabled="unlockedDay < 2"
           @click="openOverlay(dayData[1])"
+          id="glow-on-hover"
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 2
-              ? 'bg-[#3B7B61]'
+              ? 'bg-[#3B7B61] cursor-pointer'
               : 'bg-[#3B7B61]/35 cursor-not-allowed',
           ]"
         >
@@ -369,18 +373,22 @@ import Footer from "~/components/Footer.vue";
 const date = ref(""); // nieuwe reactive variabele
 const text = ref(""); // nieuwe reactive variabele
 const link = ref(""); // nieuwe reactive variabele
+const day = ref(null);
 
 function openOverlay(dayObject) {
   if (unlockedDay.value < dayObject.day) return; // safety: niet klikken
-
+  day.value = dayObject.day;
   date.value = dayObject.date;
   text.value = dayObject.text;
   link.value = dayObject.link;
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(1);
+const unlockedDay = ref(2);
+const mounted = ref(false);
+
 onMounted(() => {
+  mounted.value = true;
   const loader = document.getElementById("loader");
 
   setTimeout(() => {
@@ -402,8 +410,8 @@ const dayData = [
   {
     day: 2,
     date: "2 december",
-    text: "Tekst dag 2...",
-    link: "https://example.com",
+    text: `Welkom terug! Ik vond de reacties die ik gister kreeg echt heel leuk, en ik hoop dat jullie dit vandaag ook weer lezen.<br> <br> Ik kreeg gister meteen een reactie van Mijs met een suggestie voor een van de vakjes! Dat vond ik heel erg leuk, ookal heb ik natuurlijk alle content al helemaal klaarliggen voor deze adventkalender <span class="hidden-text">(grapje, suggesties zijn zeer welkom).</span> <br><br> Voor de website van vandaag moet je even gaan zitten, want het is niet zomaar opgelost... Veel succes! En laat het even weten als het gelukt is :)`,
+    link: "https://play.textadventures.co.uk/textadventures/dgq2uwpxcu6iuqi-72jzcw",
   },
   {
     day: 3,
@@ -549,6 +557,7 @@ const dayData = [
 
 /* Glow layer */
 #glow-on-hover::before {
+  pointer-events: none;
   content: "";
   position: absolute;
   top: 0;
@@ -558,12 +567,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #a31d1d,
-    #b65d66,
-    #a31d1d,
-    #b65d66,
-    #a31d1d,
-    #b65d66
+    #3b7b61,
+    #1b4d3e,
+    #3b7b61,
+    #1b4d3e,
+    #3b7b61,
+    #1b4d3e
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;

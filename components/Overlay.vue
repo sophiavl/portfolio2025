@@ -3,11 +3,11 @@
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
   >
     <section
-      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col justify-between items-center pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
+      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col items-center justify-between pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
     >
-      <section class="flex flex-col justify-between">
-        <header class="flex flex-col w-full items-start pb-2">
-          <section class="flex w-full justify-between">
+      <section class="flex flex-col">
+        <section class="w-full">
+          <header class="flex w-full justify-between pb-2">
             <h1 class="text-[#00131B]">{{ date }}</h1>
             <button
               @click="onClick"
@@ -20,17 +20,22 @@
                 style="color: #120000"
               />
             </button>
-          </section>
+          </header>
           <div class="w-[95%] h-[0.05rem] bg-[#120000]/20"></div>
-        </header>
-        <section class="flex flex-col pb-2">
+        </section>
+        <section class="flex flex-col pb-4">
           <p
-            class="text-[#00131B] text-left"
+            v-if="mounted"
+            class="text-[#00131B] text-left pt-4"
             v-html="text"
           ></p>
         </section>
       </section>
-      <Vakje :link="link"><h1 class="vakje">1</h1></Vakje>
+      <VakjeDeur
+        :link="link"
+        :day="day"
+        ><slot></slot
+      ></VakjeDeur>
     </section>
   </section>
 </template>
@@ -39,13 +44,21 @@
 import { defineEmits } from "vue";
 import { Icon } from "@iconify/vue";
 import { onMounted } from "vue";
-import Vakje from "./Vakje.vue";
+import VakjeDeur from "./VakjeDeur.vue";
+import VakjeSnow from "./VakjeSnow.vue";
 
 const emit = defineEmits(["closeOverlay"]);
 const props = defineProps({
+  day: Number,
   date: String,
   text: String,
   link: String,
+});
+
+const mounted = ref(false);
+
+onMounted(() => {
+  mounted.value = true;
 });
 
 function onClick() {
@@ -110,6 +123,19 @@ header {
   line-height: 1.4;
 }
 
+.hidden-text {
+  background-color: black; /* zwarte arcering */
+  color: black; /* tekst onzichtbaar */
+  transition: color 0.3s ease; /* smooth fade-in */
+  padding: 2px 4px; /* optioneel: mooiere blokjes */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.hidden-text:hover {
+  color: white; /* tekst zichtbaar bij hover */
+}
+
 h1 {
   font-family: "InstrumentSerif";
   font-size: 1.9rem;
@@ -134,11 +160,6 @@ p {
   font-weight: 300 !important;
   line-height: 1.3;
   color: #00131b;
-}
-
-.vakje {
-  font-size: 5rem !important;
-  color: #fef9e1;
 }
 
 a,
