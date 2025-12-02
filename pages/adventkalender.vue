@@ -2,6 +2,7 @@
   <main
     class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#fffdf5]"
   >
+    <Analytics />
     <div
       id="loader"
       class="loader-screen"
@@ -369,6 +370,7 @@
 <script setup>
 import Overlay from "../components/Overlay.vue";
 import { ref } from "vue";
+import { Analytics } from "@vercel/analytics/nuxt";
 import Footer from "~/components/Footer.vue";
 const date = ref(""); // nieuwe reactive variabele
 const text = ref(""); // nieuwe reactive variabele
