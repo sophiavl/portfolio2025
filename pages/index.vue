@@ -4,7 +4,6 @@
     class="snap-y snap-mandatory justify-center"
   >
     <!-- <Nav></Nav> -->
-    <Analytics></Analytics>
     <Hero
       ref="hero"
       class="snap-start h-lvh z-0"
