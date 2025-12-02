@@ -2,7 +2,6 @@
   <main
     class="flex flex-col h-screen justify-between items-center overflow-hidden bg-[#fffdf5]"
   >
-    <Analytics />
     <div
       id="loader"
       class="loader-screen"
@@ -370,7 +369,6 @@
 <script setup>
 import Overlay from "../components/Overlay.vue";
 import { ref } from "vue";
-import { Analytics } from "@vercel/analytics/nuxt";
 import Footer from "~/components/Footer.vue";
 const date = ref(""); // nieuwe reactive variabele
 const text = ref(""); // nieuwe reactive variabele
@@ -412,7 +410,7 @@ const dayData = [
   {
     day: 2,
     date: "2 december",
-    text: `Welkom terug! Ik vond de reacties die ik gister kreeg echt heel leuk, en ik hoop dat jullie dit vandaag ook weer lezen.<br> <br> Ik kreeg gister meteen een reactie van Mijs met een suggestie voor een van de vakjes! Dat vond ik heel erg leuk, ookal heb ik natuurlijk alle content al helemaal klaarliggen voor deze adventkalender <span class="hidden-text">(grapje, suggesties zijn zeer welkom).</span> <br><br> Voor de website van vandaag moet je even gaan zitten, want het is niet zomaar opgelost... Veel succes! En laat het even weten als het gelukt is :)`,
+    text: `Welkom terug! Ik vond de reacties die ik gister kreeg echt heel leuk, en ik hoop dat jullie dit vandaag ook weer lezen.<br> <br> Ik kreeg gister meteen een reactie van Mijs met een suggestie voor een van de vakjes! Dat vond ik heel erg leuk, ookal heb ik natuurlijk alle content al helemaal klaarliggen voor deze adventkalender <span class="hidden-text">(grapje, suggesties zijn zeer welkom).</span> <br><br> Voor de website van vandaag moet je even gaan zitten, want het is niet zomaar opgelost... Veel succes! En laat het even weten als het gelukt is :) <br> <br> <strong>Update:</strong>  <br> De website van vandaag is best onduidelijk dus even een korte uitleg: Je kunt op deze website allerlei dingen verzamelen door op de bruine woorden te klikken. De verzamelde dingen kun je gebruiken bij andere pagina's en zo steeds verder komen. Het is dus een beetje zoeken en dingen bij elkaar vinden om het uit te spelen.`,
     link: "https://play.textadventures.co.uk/textadventures/dgq2uwpxcu6iuqi-72jzcw",
   },
   {
