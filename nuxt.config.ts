@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
   css: ["@/assets/css/tailwind.css", "@/assets/css/main.css"],
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@vercel/analytics/nuxt"],
   build: {
     transpile: ["gsap"],
   },
