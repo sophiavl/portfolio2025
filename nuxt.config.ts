@@ -8,3 +8,4 @@ export default defineNuxtConfig({
     transpile: ["gsap"],
   },
 });
+// test
