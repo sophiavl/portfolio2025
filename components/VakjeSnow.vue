@@ -1,5 +1,5 @@
 <template>
-  <div class="card relative w-[280px] h-[400px] overflow-hidden">
+  <div class="card relative w-[280px] h-[350px] overflow-hidden">
     <!-- Achtergrond content -->
     <a
       v-if="revealed"
@@ -55,8 +55,8 @@ const height = ref(0);
 // Wanneer component mounted is
 onMounted(() => {
   const canvas = canvasRef.value;
-  width.value = canvas.width = 580;
-  height.value = canvas.height = 500;
+  width.value = canvas.width = 280;
+  height.value = canvas.height = 350;
 
   ctx.value = canvas.getContext("2d");
 
