@@ -7,7 +7,9 @@
       target="_blank"
       class="absolute inset-0 flex items-center justify-center bg-[#E1F6FF] text-[#120000] font-bold z-[1]"
     >
-      <p>Explore!</p>
+      <button class="scratch-button">
+        <p>Vertrek!</p>
+      </button>
     </a>
 
     <div
@@ -101,7 +103,7 @@ const checkReveal = () => {
 
   const progress = cleared / (width.value * height.value);
 
-  if (progress > 0.4) {
+  if (progress > 0.45) {
     revealed.value = true;
   }
 };
@@ -110,5 +112,13 @@ const checkReveal = () => {
 <style scoped>
 .card {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.scratch-button {
+  width: 6.5rem;
+  height: 2.3rem;
+  border-radius: 0.8rem;
+  background: #66ccf8;
+  box-shadow: 0 5px 0 0 #4d7687;
 }
 </style>
