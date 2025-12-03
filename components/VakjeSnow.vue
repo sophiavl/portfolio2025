@@ -101,7 +101,7 @@ const checkReveal = () => {
 
   const progress = cleared / (width.value * height.value);
 
-  if (progress > 0.3) {
+  if (progress > 0.4) {
     revealed.value = true;
   }
 };
