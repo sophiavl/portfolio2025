@@ -31,11 +31,24 @@
           ></p>
         </section>
       </section>
-      <VakjeDeur
-        :link="link"
-        :day="day"
-        ><slot></slot
-      ></VakjeDeur>
+      <section>
+        <h2
+          class="scratch"
+          v-if="vakje === 'scratch'"
+        >
+          Kras en vind!
+        </h2>
+        <VakjeDeur
+          v-if="vakje === 'deur'"
+          :link="link"
+          :day="day"
+          ><slot></slot
+        ></VakjeDeur>
+        <VakjeSnow
+          v-else
+          :link="link"
+        ></VakjeSnow>
+      </section>
     </section>
   </section>
 </template>
@@ -53,6 +66,7 @@ const props = defineProps({
   date: String,
   text: String,
   link: String,
+  vakje: String,
 });
 
 const mounted = ref(false);

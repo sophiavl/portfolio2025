@@ -20,6 +20,7 @@
       :text="text"
       :link="link"
       :day="day"
+      :vakje="vakje"
       @closeOverlay="overlay = false"
     ></Overlay>
     <section
@@ -42,7 +43,6 @@
         <button
           :disabled="unlockedDay < 2"
           @click="openOverlay(dayData[1])"
-          id="glow-on-hover"
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 2
@@ -55,6 +55,7 @@
 
         <button
           :disabled="unlockedDay < 3"
+          id="glow-on-hover"
           @click="openOverlay(dayData[2])"
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
@@ -374,6 +375,7 @@ const date = ref(""); // nieuwe reactive variabele
 const text = ref(""); // nieuwe reactive variabele
 const link = ref(""); // nieuwe reactive variabele
 const day = ref(null);
+const vakje = ref("");
 
 function openOverlay(dayObject) {
   if (unlockedDay.value < dayObject.day) return; // safety: niet klikken
@@ -381,10 +383,11 @@ function openOverlay(dayObject) {
   date.value = dayObject.date;
   text.value = dayObject.text;
   link.value = dayObject.link;
+  vakje.value = dayObject.vakje;
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(2);
+const unlockedDay = ref(3);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -406,24 +409,28 @@ const dayData = [
     date: "1 december",
     text: "Welkom bij de eerste dag van mijn <strong>Internet Blender Adventkalender</strong>!<br> <br> Zelf word ik altijd erg enthousiast van adventkalenders. Elke dag een vakje open maken maakt december nóg beter dan dat december op zichzelf al is. Deze blijdschap wil ik graag met jullie delen en samen met jullie aftellen tot kerst. Dit ga ik doen door jullie elke dag een leuk stukje internet mee te geven! <br> <br> Deze stukjes internet zullen in allerlei vormen komen. In ieder geval zullen het dingen zijn waarvan je op zijn minst denkt: ‘ah, das leuk’. Misschien denk je wel: ‘wow dit is echt geweldig, mijn dag is echt zoveel beter gemaakt nu!’ Maar dat zullen jullie vanzelf wel merken, als je elke dag terugkomt natuurlijk :) <br> <br>De eerste dag beginnen we met deze geweldige website, sorry alvast als je thalassofobie hebt xx.",
     link: "https://neal.fun/deep-sea/",
+    vakje: "deur",
   },
   {
     day: 2,
     date: "2 december",
     text: `Welkom terug! Ik vond de reacties die ik gister kreeg echt heel leuk, en ik hoop dat jullie dit vandaag ook weer lezen.<br> <br> Ik kreeg gister meteen een reactie van Mijs met een suggestie voor een van de vakjes! Dat vond ik heel erg leuk, ookal heb ik natuurlijk alle content al helemaal klaarliggen voor deze adventkalender <span class="hidden-text">(grapje, suggesties zijn zeer welkom).</span> <br><br> Voor de website van vandaag moet je even gaan zitten, want het is niet zomaar opgelost... Veel succes! En laat het even weten als het gelukt is :) <br> <br> <strong>Update:</strong>  <br> Je kunt op deze website allerlei dingen verzamelen door op de bruine woorden te klikken. Deze kun je gebruiken bij andere pagina's en zo steeds verder komen. Het is dus een beetje zoeken en dingen bij elkaar vinden om het uit te spelen.`,
     link: "https://play.textadventures.co.uk/textadventures/dgq2uwpxcu6iuqi-72jzcw",
+    vakje: "deur",
   },
   {
     day: 3,
     date: "3 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Heb jij ook zo'n zin om op vakantie te gaan? Of om gewoon heel even ergens anders te zijn? Al is het maar voor even... <br><br> Dan is vandaag jouw dag!",
+    link: "https://www.window-swap.com/Window",
+    vakje: "scratch",
   },
   {
     day: 4,
     date: "3 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
+    vakje: "deur",
   },
   {
     day: 5,
@@ -567,12 +574,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #3b7b61,
-    #1b4d3e,
-    #3b7b61,
-    #1b4d3e,
-    #3b7b61,
-    #1b4d3e
+    #551c22,
+    #89010e,
+    #551c22,
+    #89010e,
+    #551c22,
+    #89010e
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
