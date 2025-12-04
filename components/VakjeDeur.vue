@@ -8,7 +8,7 @@
         id="link"
         :href="link"
         target="_blank"
-        ><p class="text-center">Het blijft spannend tot je hier klikt...</p></a
+        ><p class="text-center"><u>Klik!</u></p></a
       >
     </div>
     <div

@@ -55,7 +55,6 @@
 
         <button
           :disabled="unlockedDay < 3"
-          id="glow-on-hover"
           @click="openOverlay(dayData[2])"
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
@@ -70,6 +69,8 @@
       <div class="flex h-[23%] w-screen">
         <button
           :disabled="unlockedDay < 4"
+          id="glow-on-hover"
+
           @click="openOverlay(dayData[3])"
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
@@ -387,7 +388,7 @@ function openOverlay(dayObject) {
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(3);
+const unlockedDay = ref(4);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -427,128 +428,128 @@ const dayData = [
   },
   {
     day: 4,
-    date: "3 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    date: "4 december",
+    text: "Het afgelopen jaar ben ik na een lange tijd weer veel gaan lezen. Dit begon toen ik de boeken van The Hunger Games in handen kreeg en opnieuw verliefd werd op deze serie. Net zoals toen ik vroeger de films keek. <br> <br> ( De boeken zijn beter dan de films ) ;) <br><br>Ik heb mijn liefde voor lezen sindsdien weer helemaal gevonden en wil de website van vandaag daar aan wijden. Deze website komt perfect uit als je alle boeken van je favoriete auteur al hebt uitgelezen en je snakt naar meer. Vul de naam van deze auteur in en <i>watch the magic happen…<i>",
+    link: "https://www.literature-map.com",
     vakje: "deur",
   },
   {
     day: 5,
-    date: "3 december",
+    date: "5 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 6,
-    date: "3 december",
+    date: "6 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 7,
-    date: "3 december",
+    date: "7 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 8,
-    date: "3 december",
+    date: "8 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 9,
-    date: "3 december",
+    date: "9 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 10,
-    date: "3 december",
+    date: "10 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 11,
-    date: "3 december",
+    date: "11 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 12,
-    date: "3 december",
+    date: "12 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 13,
-    date: "3 december",
+    date: "13 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 14,
-    date: "3 december",
+    date: "14 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 15,
-    date: "3 december",
+    date: "15 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 16,
-    date: "3 december",
+    date: "16 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 17,
-    date: "3 december",
+    date: "17 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 18,
-    date: "3 december",
+    date: "18 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 19,
-    date: "3 december",
+    date: "19 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 20,
-    date: "3 december",
+    date: "20 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 21,
-    date: "3 december",
+    date: "21 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 22,
-    date: "3 december",
+    date: "22 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 23,
-    date: "3 december",
+    date: "23 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
   {
     day: 24,
-    date: "3 december",
+    date: "24 december",
     text: "Tekst dag 3...",
     link: "https://example.com",
   },
@@ -574,12 +575,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #551c22,
-    #89010e,
-    #551c22,
-    #89010e,
-    #551c22,
-    #89010e
+    #1B4D3E,
+    #388971,
+    #1B4D3E,
+    #388971,
+    #1B4D3E,
+    #388971
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
