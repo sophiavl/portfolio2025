@@ -69,7 +69,6 @@
       <div class="flex h-[23%] w-screen">
         <button
           :disabled="unlockedDay < 4"
-          id="glow-on-hover"
 
           @click="openOverlay(dayData[3])"
           :class="[
@@ -107,6 +106,8 @@
         <button
           :disabled="unlockedDay < 5"
           @click="openOverlay(dayData[4])"
+                    id="glow-on-hover"
+
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 5
@@ -388,7 +389,7 @@ function openOverlay(dayObject) {
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(4);
+const unlockedDay = ref(5);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -436,31 +437,32 @@ const dayData = [
   {
     day: 5,
     date: "5 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Eergister is Spotify wrapped weer uitgekomen. Hierbij vermeldt Spotify ook altijd welk genre jouw favoriet is. Nu heb ik al 3 jaar op rij ‘indie rock’ als favoriete genre en ik denk daarom dat het tijd is om mijn horizon te verbreden. Heb jij nou ook al drie jaar achter elkaar hetzelfde genre? Deze website biedt de ultieme kaart van álle muziekgenres die je maar kunt bedenken. Van bekende stijlen tot verborgen pareltjes waar je nog nooit van hebt gehoord….",
+    link: "https://everynoise.com/engenremap.html",
+    vakje: "cadeau",
   },
   {
     day: 6,
     date: "6 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Tekst dag 3..",
+    link: "https://pointerpointer.com/ ",
   },
   {
     day: 7,
     date: "7 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Deze website is voor alle vaders (en Lindy) die ondertussen door hun repertoire aan flauwe grappen heen zijn en niks meer te vertellen hebben aan de eettafel.",
+    link: "https://icanhazdadjoke.com/ ",
   },
   {
     day: 8,
     date: "8 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Met een adventkalender tel je af tot kerst, en kerst draait om warmte, samenzijn en lief zijn voor de mensen om je heen. Ook voor mensen die je helemaal niet kent. Daarom kun je op deze website een berichtje achterlaten voor de volgende bezoeker. Iemand die je niet kent, maar die je met een paar lieve woorden misschien precies geeft wat ze nodig hebben. Spread the love <3<3<3",
+    link: "https://www.dearnextvisitor.com/ ",
   },
   {
     day: 9,
     date: "9 december",
-    text: "Tekst dag 3...",
+    text: "Het is vandaag Internationale Techno dag! Om dit te vieren wil ik jullie graag introduceren aan nog véél meer muziekgenres. Ik kan jullie alvast vertellen dat er meer zijn dan je ooit had gedacht",
     link: "https://example.com",
   },
   {
@@ -472,8 +474,8 @@ const dayData = [
   {
     day: 11,
     date: "11 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Het is koud en guur buiten. Daarom denk ik vandaag terug aan chillen aan het zwembad in de zomer, cocktail in de hand en de zon op mijn gezicht. Hierbij horen natuurlijk ook zomerse muziekjes. Daar past deze website met een old-school perfect bij. Alhoewel de muziek op deze website niet echt techno is, en ik eigenlijk de website ook niet helemaal begrijp, hoop ik dat jullie hem leuk vinden.",
+    link: "https://poolsuite.net/ ",
   },
   {
     day: 12,

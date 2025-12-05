@@ -44,6 +44,7 @@
           :day="day"
           ><slot></slot
         ></VakjeDeur>
+        <Cadeau v-if="vakje === 'cadeau'" :link="link"></Cadeau>
         <VakjeSnow
           v-else
           :link="link"
@@ -58,6 +59,7 @@ import { defineEmits } from "vue";
 import { Icon } from "@iconify/vue";
 import { onMounted } from "vue";
 import VakjeDeur from "./VakjeDeur.vue";
+import Cadeau from "./Cadeau.vue";
 import VakjeSnow from "./VakjeSnow.vue";
 
 const emit = defineEmits(["closeOverlay"]);
