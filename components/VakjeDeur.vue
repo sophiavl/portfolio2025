@@ -65,7 +65,7 @@ function openDoor() {
 .wrapper {
   position: relative;
   width: 13rem;
-  height: 8rem;
+  height: 7rem;
   perspective: 800px;
 }
 

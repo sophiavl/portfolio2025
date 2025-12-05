@@ -437,7 +437,7 @@ const dayData = [
   {
     day: 5,
     date: "5 december",
-    text: "Eergister is Spotify wrapped weer uitgekomen. Hierbij vermeldt Spotify ook altijd welk genre jouw favoriet is. Nu heb ik al 3 jaar op rij ‘indie rock’ als favoriete genre en ik denk daarom dat het tijd is om mijn horizon te verbreden. Heb jij nou ook al drie jaar achter elkaar hetzelfde genre? Deze website biedt de ultieme kaart van álle muziekgenres die je maar kunt bedenken. Van bekende stijlen tot verborgen pareltjes waar je nog nooit van hebt gehoord….",
+    text: "Eergister is Spotify wrapped weer uitgekomen. Hierbij vermeldt Spotify ook altijd welk genre jouw favoriet is. Nu heb ik al 3 jaar op rij ‘indie rock’ als favoriete genre en ik denk daarom dat het tijd is om mijn horizon te verbreden. Heb jij nou ook al drie jaar achter elkaar hetzelfde genre? Deze website biedt de ultieme kaart van álle muziekgenres die je maar kunt bedenken. Van bekende stijlen tot verborgen pareltjes waar je nog nooit van hebt gehoord….<br><br> *Scroll op je telefoon naar rechts om de kaart te kunnen zien*",
     link: "https://everynoise.com/engenremap.html",
     vakje: "cadeau",
   },

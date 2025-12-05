@@ -3,7 +3,7 @@
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
   >
     <section
-      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col items-center justify-between pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
+      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col items-center justify-start pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
     >
       <section class="flex flex-col">
         <section class="w-full">
@@ -32,12 +32,17 @@
         </section>
       </section>
       <section>
-        <h2
-          class="scratch"
-          v-if="vakje === 'scratch'"
-        >
-          Kras en vind!
-        </h2>
+        <section v-if="vakje === 'scratch'">
+          <h2
+            class="scratch"
+            
+          >
+            Kras en vind!
+          </h2>
+          <VakjeSnow
+            :link="link"
+          ></VakjeSnow>
+        </section>
         <VakjeDeur
           v-if="vakje === 'deur'"
           :link="link"
@@ -45,10 +50,7 @@
           ><slot></slot
         ></VakjeDeur>
         <Cadeau v-if="vakje === 'cadeau'" :link="link"></Cadeau>
-        <VakjeSnow
-          v-else
-          :link="link"
-        ></VakjeSnow>
+        
       </section>
     </section>
   </section>
