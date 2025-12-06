@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :style="{height: height}">
     <div
       class="content"
       ref="isOpen"
@@ -13,6 +13,7 @@
     </div>
     <div
       class="front"
+      :style="{height: height}"
       ref="doorRef"
       @click="openDoor"
     >
@@ -27,6 +28,7 @@ import gsap from "gsap";
 const props = defineProps({
   day: Number,
   link: String,
+  height: {String, default: "7rem"}
 });
 
 const isOpen = ref(false);

@@ -21,6 +21,7 @@
       :link="link"
       :day="day"
       :vakje="vakje"
+      :height="height"
       @closeOverlay="overlay = false"
     ></Overlay>
     <section
@@ -106,7 +107,6 @@
         <button
           :disabled="unlockedDay < 5"
           @click="openOverlay(dayData[4])"
-                    id="glow-on-hover"
 
           :class="[
             'w-1/3 h-full flex justify-center items-center text-xl ',
@@ -122,6 +122,7 @@
         <button
           :disabled="unlockedDay < 6"
           @click="openOverlay(dayData[5])"
+            id="glow-on-hover"
           :class="[
             'w-1/2 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 6
@@ -366,7 +367,7 @@
         </button>
       </div>
     </section>
-    <Footer></Footer>
+    <Footer bgColor="#FFFDF4" textColor="#1b2422"></Footer>
   </main>
 </template>
 <script setup>
@@ -377,6 +378,7 @@ const date = ref(""); // nieuwe reactive variabele
 const text = ref(""); // nieuwe reactive variabele
 const link = ref(""); // nieuwe reactive variabele
 const day = ref(null);
+const height = ref("");
 const vakje = ref("");
 
 function openOverlay(dayObject) {
@@ -386,10 +388,11 @@ function openOverlay(dayObject) {
   text.value = dayObject.text;
   link.value = dayObject.link;
   vakje.value = dayObject.vakje;
+  height.value = dayObject.height;
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(5);
+const unlockedDay = ref(6);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -444,14 +447,16 @@ const dayData = [
   {
     day: 6,
     date: "6 december",
-    text: "Tekst dag 3..",
-    link: "https://pointerpointer.com/ ",
+    text: "Deze website is voor alle vaders (en Lindy) die ondertussen door hun repertoire aan flauwe grappen heen zijn en niks meer te vertellen hebben aan de eettafel.<br><br><br><br>",
+    link: "https://icanhazdadjoke.com/ ",
+    vakje: "deur",
+    height: "24rem"
   },
   {
     day: 7,
     date: "7 december",
-    text: "Deze website is voor alle vaders (en Lindy) die ondertussen door hun repertoire aan flauwe grappen heen zijn en niks meer te vertellen hebben aan de eettafel.",
-    link: "https://icanhazdadjoke.com/ ",
+    text: "Tekst dag 3...",
+    link: "https://pointerpointer.com/ ",
   },
   {
     day: 8,
@@ -577,12 +582,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #1B4D3E,
-    #388971,
-    #1B4D3E,
-    #388971,
-    #1B4D3E,
-    #388971
+    #551C22,
+    #d22d3e,
+    #551C22,
+    #d22d3e,
+    #551C22,
+    #d22d3e
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
