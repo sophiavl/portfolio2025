@@ -450,7 +450,7 @@ const dayData = [
     text: "Deze website is voor alle vaders (en Lindy) die ondertussen door hun repertoire aan flauwe grappen heen zijn en niks meer te vertellen hebben aan de eettafel.<br><br><br><br>",
     link: "https://icanhazdadjoke.com/ ",
     vakje: "deur",
-    height: "24rem"
+    height: "17rem"
   },
   {
     day: 7,
