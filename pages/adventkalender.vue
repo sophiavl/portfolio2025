@@ -122,7 +122,6 @@
         <button
           :disabled="unlockedDay < 6"
           @click="openOverlay(dayData[5])"
-            id="glow-on-hover"
           :class="[
             'w-1/2 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 6
@@ -135,6 +134,7 @@
         <button
           :disabled="unlockedDay < 7"
           @click="openOverlay(dayData[6])"
+          id="glow-on-hover"
           :class="[
             'w-1/2 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 7
@@ -392,7 +392,7 @@ function openOverlay(dayObject) {
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(6);
+const unlockedDay = ref(7);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -455,8 +455,10 @@ const dayData = [
   {
     day: 7,
     date: "7 december",
-    text: "Tekst dag 3...",
+    text: "Over deze website heb ik eigenlijk niet zoveel te zeggen. Dus kijk maar gewoon.<br><br><br><br>",
     link: "https://pointerpointer.com/ ",
+    vakje: "deur",
+    height: "25rem"
   },
   {
     day: 8,
@@ -582,12 +584,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #551C22,
-    #d22d3e,
-    #551C22,
-    #d22d3e,
-    #551C22,
-    #d22d3e
+    #3B7B61,
+    #54b28c,
+    #3B7B61,
+    #54b28c,
+    #3B7B61,
+    #54b28c
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
