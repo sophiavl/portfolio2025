@@ -458,7 +458,7 @@ const dayData = [
     text: "Over deze website heb ik eigenlijk niet zoveel te zeggen. Dus kijk maar gewoon.<br><br><br><br>",
     link: "https://pointerpointer.com/ ",
     vakje: "deur",
-    height: "25rem"
+    height: "21rem"
   },
   {
     day: 8,
