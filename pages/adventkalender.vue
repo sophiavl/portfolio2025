@@ -134,7 +134,6 @@
         <button
           :disabled="unlockedDay < 7"
           @click="openOverlay(dayData[6])"
-          id="glow-on-hover"
           :class="[
             'w-1/2 h-full flex justify-center items-center text-xl ',
             unlockedDay >= 7
@@ -148,6 +147,8 @@
       <div class="flex h-[9%] w-screen">
         <button
           :disabled="unlockedDay < 8"
+                    id="glow-on-hover"
+
           @click="openOverlay(dayData[7])"
           :class="[
             'w-[15%] h-full flex justify-center items-center text-xl border-[#120000]',
@@ -392,7 +393,7 @@ function openOverlay(dayObject) {
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(7);
+const unlockedDay = ref(8);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -463,8 +464,9 @@ const dayData = [
   {
     day: 8,
     date: "8 december",
-    text: "Met een adventkalender tel je af tot kerst, en kerst draait om warmte, samenzijn en lief zijn voor de mensen om je heen. Ook voor mensen die je helemaal niet kent. Daarom kun je op deze website een berichtje achterlaten voor de volgende bezoeker. Iemand die je niet kent, maar die je met een paar lieve woorden misschien precies geeft wat ze nodig hebben. Spread the love <3<3<3",
+    text: "Met een adventkalender tel je af tot kerst, en kerst draait natuurlijk om lief zijn voor de mensen om je heen. Ook voor mensen die je niet kent. Daarom kun je op deze website een berichtje achterlaten voor de volgende bezoeker. In ruil daarvoor krijg jij natuurlijk ook een berichtje!",
     link: "https://www.dearnextvisitor.com/ ",
+    vakje: 'scratch'
   },
   {
     day: 9,
@@ -584,12 +586,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #3B7B61,
-    #54b28c,
-    #3B7B61,
-    #54b28c,
-    #3B7B61,
-    #54b28c
+    #A31D1D,
+    #ff2a2a,
+    #A31D1D,
+    #ff2a2a,
+    #A31D1D,
+    #ff2a2a
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;

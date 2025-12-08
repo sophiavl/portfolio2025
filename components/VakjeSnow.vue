@@ -8,7 +8,7 @@
       class="absolute inset-0 flex items-center justify-center bg-[#E1F6FF] text-[#120000] font-bold z-[1]"
     >
       <button class="scratch-button">
-        <p>Vertrek!</p>
+        <p>Ga!</p>
       </button>
     </a>
 
