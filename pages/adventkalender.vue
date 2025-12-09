@@ -147,8 +147,6 @@
       <div class="flex h-[9%] w-screen">
         <button
           :disabled="unlockedDay < 8"
-                    id="glow-on-hover"
-
           @click="openOverlay(dayData[7])"
           :class="[
             'w-[15%] h-full flex justify-center items-center text-xl border-[#120000]',
@@ -162,6 +160,7 @@
         <div class="flex flex-col h-full w-[45%]">
           <button
             :disabled="unlockedDay < 9"
+            id="glow-on-hover"
             @click="openOverlay(dayData[8])"
             :class="[
               'flex justify-center items-center text-xl h-1/2 ',
@@ -393,7 +392,7 @@ function openOverlay(dayObject) {
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(8);
+const unlockedDay = ref(9);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -471,8 +470,9 @@ const dayData = [
   {
     day: 9,
     date: "9 december",
-    text: "Het is vandaag Internationale Techno dag! Om dit te vieren wil ik jullie graag introduceren aan nog véél meer muziekgenres. Ik kan jullie alvast vertellen dat er meer zijn dan je ooit had gedacht",
-    link: "https://example.com",
+    text: "Vandaag is het internationale technodag! Op deze mooie dag is het druilerig en bewolkt. Daarom begeef ik me in gedachten aan het zwembad, op een warme zomerdag, cocktail in de hand en de zon op mijn gezicht. Ik mis alleen nog iets.. Ah ja tuurlijk: Hierbij horen natuurlijk ook zomerse muziekjes! Daar past deze website met een old-school design perfect bij. Alhoewel de muziek op deze website niet perse techno is, en ik eigenlijk de website ook niet helemaal begrijp, hoop ik dat jullie hem leuk vinden.",
+    link: "https://poolsuite.net",
+    vakje: "cadeau"
   },
   {
     day: 10,
@@ -586,12 +586,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #A31D1D,
-    #ff2a2a,
-    #A31D1D,
-    #ff2a2a,
-    #A31D1D,
-    #ff2a2a
+    #1B4D3E,
+    #41b693,
+    #1B4D3E,
+    #41b693,
+    #1B4D3E,
+    #41b693
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
