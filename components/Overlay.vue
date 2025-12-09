@@ -1,8 +1,10 @@
 <template>
   <section
+  
     class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
   >
     <section
+    ref="overlay"
       class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col items-center justify-start pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
     >
       <section class="flex flex-col">
@@ -65,6 +67,7 @@ import VakjeDeur from "./VakjeDeur.vue";
 import Cadeau from "./Cadeau.vue";
 import VakjeSnow from "./VakjeSnow.vue";
 
+const overlay = ref(null);
 const emit = defineEmits(["closeOverlay"]);
 const props = defineProps({
   day: Number,
@@ -79,6 +82,9 @@ const mounted = ref(false);
 
 onMounted(() => {
   mounted.value = true;
+  requestAnimationFrame(() => {
+    overlay.value.classList.add("bounce-in")
+  })
 });
 
 function onClick() {
@@ -141,6 +147,27 @@ body:not(.touch) #link:hover {
 
 header {
   line-height: 1.4;
+}
+
+.overlay {
+  transform: scale(0.9);
+  transition: transform 0.5s ease;
+}
+
+.bounce-in {
+  animation: bounceIn 0.5s ease forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .hidden-text {
