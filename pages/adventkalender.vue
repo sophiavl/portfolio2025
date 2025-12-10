@@ -160,7 +160,6 @@
         <div class="flex flex-col h-full w-[45%]">
           <button
             :disabled="unlockedDay < 9"
-            id="glow-on-hover"
             @click="openOverlay(dayData[8])"
             :class="[
               'flex justify-center items-center text-xl h-1/2 ',
@@ -173,6 +172,8 @@
           </button>
           <button
             :disabled="unlockedDay < 10"
+                        id="glow-on-hover"
+
             @click="openOverlay(dayData[9])"
             :class="[
               'flex justify-center items-center text-xl h-1/2 ',
@@ -392,7 +393,7 @@ function openOverlay(dayObject) {
   overlay.value = true;
 }
 const overlay = ref(false);
-const unlockedDay = ref(9);
+const unlockedDay = ref(10);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -477,8 +478,10 @@ const dayData = [
   {
     day: 10,
     date: "10 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "",
+    link: "https://joshworth.com/dev/pixelspace/pixelspace_solarsystem.html",
+    vakje: "deur",
+    height: "24rem"
   },
   {
     day: 11,
@@ -586,12 +589,12 @@ const dayData = [
 
   background: linear-gradient(
     -45deg,
-    #1B4D3E,
-    #41b693,
-    #1B4D3E,
-    #41b693,
-    #1B4D3E,
-    #41b693
+    #3B7B61,
+    #3ca888,
+    #3B7B61,
+    #3ca888,
+    #3B7B61,
+    #3ca888
   );
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
