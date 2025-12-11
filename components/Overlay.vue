@@ -1,59 +1,31 @@
 <template>
-  <section
-  
-    class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10"
-  >
-    <section
-    ref="overlay"
-      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col items-center justify-start pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24"
-    >
-      <section class="flex flex-col">
-        <section class="w-full">
-          <header class="flex w-full justify-between pb-2">
+  <section class="w-screen h-screen absolute bg-black/75 flex flex-col justify-center items-center z-10">
+    <section ref="overlay"
+      class="w-[90%] h-[90%] bg-[#FFF9EB] top-30 rounded-4xl flex flex-col items-center justify-start pt-6 p-[1.4rem] md:w-[80%] xl:w-[40%] xl:pb-24">
+      <section class="flex flex-col w-[100%]">
+        <section class="w-[100%]">
+          <header class="flex justify-between pb-2">
             <h1 class="text-[#00131B]">{{ date }}</h1>
-            <button
-              @click="onClick"
-              class="text-[#120000]"
-            >
-              <Icon
-                icon="material-symbols-light:close"
-                width="36"
-                height="36"
-                style="color: #120000"
-              />
+            <button @click="onClick" class="text-[#120000]">
+              <Icon icon="material-symbols-light:close" width="36" height="36" style="color: #120000" />
             </button>
           </header>
           <div class="w-[95%] h-[0.05rem] bg-[#120000]/20"></div>
         </section>
         <section class="flex flex-col pb-4">
-          <p
-            v-if="mounted"
-            class="text-[#00131B] text-left pt-4"
-            v-html="text"
-          ></p>
+          <p v-if="mounted" class="text-[#00131B] text-left pt-4" v-html="text"></p>
         </section>
       </section>
       <section>
         <section v-if="vakje === 'scratch'">
-          <h2
-            class="scratch"
-            
-          >
-            Kras en vind!
-          </h2>
-          <VakjeSnow
-            :link="link"
-          ></VakjeSnow>
+
+          <VakjeSnow :link="link"></VakjeSnow>
         </section>
-        <VakjeDeur
-          v-if="vakje === 'deur'"
-          :link="link"
-          :day="day"
-          :height="height"
-          ><slot></slot
-        ></VakjeDeur>
+        <VakjeDeur v-if="vakje === 'deur'" :link="link" :day="day" :height="height">
+          <slot></slot>
+        </VakjeDeur>
         <Cadeau v-if="vakje === 'cadeau'" :link="link"></Cadeau>
-        
+
       </section>
     </section>
   </section>
@@ -65,7 +37,7 @@ import { Icon } from "@iconify/vue";
 import { onMounted } from "vue";
 import VakjeDeur from "./VakjeDeur.vue";
 import Cadeau from "./Cadeau.vue";
-import VakjeSnow from "./VakjeSnow.vue";
+import VakjeSnow from "./Scratch.vue";
 
 const overlay = ref(null);
 const emit = defineEmits(["closeOverlay"]);
@@ -133,9 +105,12 @@ if (typeof window !== "undefined") {
 a {
   color: #120000 !important;
 }
+
 #link {
-  filter: blur(5px); /* voorbeeld startwaarde */
-  transition: filter 1s ease; /* hier geef je de duur van 1s aan */
+  filter: blur(5px);
+  /* voorbeeld startwaarde */
+  transition: filter 1s ease;
+  /* hier geef je de duur van 1s aan */
 }
 
 /* Desktop (hover) */
@@ -162,25 +137,32 @@ header {
   0% {
     transform: scale(1.15);
   }
+
   60% {
     transform: scale(0.95);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
 .hidden-text {
-  background-color: black; /* zwarte arcering */
-  color: black; /* tekst onzichtbaar */
-  transition: color 0.3s ease; /* smooth fade-in */
-  padding: 2px 4px; /* optioneel: mooiere blokjes */
+  background-color: black;
+  /* zwarte arcering */
+  color: black;
+  /* tekst onzichtbaar */
+  transition: color 0.3s ease;
+  /* smooth fade-in */
+  padding: 2px 4px;
+  /* optioneel: mooiere blokjes */
   border-radius: 3px;
   cursor: pointer;
 }
 
 .hidden-text:hover {
-  color: white; /* tekst zichtbaar bij hover */
+  color: white;
+  /* tekst zichtbaar bij hover */
 }
 
 h1 {
@@ -195,6 +177,7 @@ h2 {
   font-family: "CothamSans";
   font-weight: normal;
 }
+
 h3 {
   font-size: 0.9rem;
   font-weight: normal;
@@ -225,9 +208,11 @@ a,
   h2 {
     font-size: 0.9rem;
   }
+
   h3 {
     font-size: 0.9rem;
   }
+
   p {
     font-size: 0.75rem !important;
   }
@@ -239,8 +224,8 @@ a,
   }
 }
 
-@media only screen and (min-width: 900px) {
-}
+@media only screen and (min-width: 900px) {}
+
 @media only screen and (min-width: 1250px) {
   p {
     font-size: 0.9rem;
