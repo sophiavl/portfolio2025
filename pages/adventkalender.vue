@@ -358,7 +358,7 @@ const dayData = [
     day: 11,
     date: "11 december",
     text: "De link van vandaag is een erg bijzondere en is niet zoals die van de afgelopen dagen. Hij heeft best wel iets los heeft gemaakt in mij. Ik kan het je vertellen, maar je kunt ook gewoon zelf even kijken. Kras de vernieuwde kraskaart en je zult het ondervinden!",
-    link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    link: "https://rickroll.it/rickroll.mp4",
     vakje: "scratch"
   },
   {
