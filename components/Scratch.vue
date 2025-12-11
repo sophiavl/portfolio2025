@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="kraskaart" src="/public/images/kraskaart.png">
-      <div class="canvas absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[210px] h-[180px] overflow-hidden md:w-[260px] md:h-[220px]
-      lg:w-[300px] lg:h-[250px]">
+      <div class="canvas absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[210px] h-[180px] overflow-hidden md:w-[220px] md:h-[180px]
+      lg:w-[250px] lg:h-[210px]">
         <!-- Achtergrond content -->
         <a v-if="revealed" :href="link" target="_blank"
           class="absolute inset-0 flex items-center w-[100%] h-[100%]  justify-center bg-[#ececec] text-[#120000] font-bold z-[1]">
@@ -150,24 +150,31 @@ const checkReveal = () => {
 }
 
 
+@media only screen and (max-height: 500px) {
+  .kraskaart {
+    height: 292px;
+    width: 234px;
+  }
+}
+
 @media only screen and (max-height: 700px) {
   .kraskaart {
-    height: 332px;
-    width: 274px;
+    height: 312px;
+    width: 254px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .kraskaart {
-    height: 392px;
-    width: 334px;
+    height: 372px;
+    width: 314px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .kraskaart {
-    height: 492px;
-    width: 444px;
+    height: 362px;
+    width: 314px;
   }
 }
 </style>
