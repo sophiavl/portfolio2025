@@ -5,7 +5,7 @@
       <p class="loader-text">Kerstsfeer wordt geladen…</p>
     </div>
 
-    <Overlay v-if="overlay" :date="date" :text="text" :link="link" :day="day" :vakje="vakje" :height="height"
+    <Overlay v-if="overlay" :date="date" :text="text" :link="link" :day="day" :vakje="vakje" :height="height" :src="src"
       @closeOverlay="overlay = false"></Overlay>
     <section v-if="mounted" class="h-[96.5%] w-screen border-black">
       <div class="flex h-[10%] w-screen">
@@ -112,7 +112,7 @@
             <p>10</p>
           </button>
         </div>
-        <button :disabled="unlockedDay < 11" id="glow-on-hover" @click="openOverlay(dayData[10])" :class="[
+        <button :disabled="unlockedDay < 11" @click="openOverlay(dayData[10])" :class="[
           'w-[40%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 11
             ? 'bg-[#A31D1D]'
@@ -122,7 +122,7 @@
         </button>
       </div>
       <div class="flex h-[9%] w-screen">
-        <button :disabled="unlockedDay < 12" @click="openOverlay(dayData[11])" :class="[
+        <button :disabled="unlockedDay < 12" id="glow-on-hover" @click="openOverlay(dayData[11])" :class="[
           'w-[30%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 12
             ? 'bg-[#551C22]'
@@ -252,6 +252,7 @@ const link = ref(""); // nieuwe reactive variabele
 const day = ref(null);
 const height = ref("");
 const vakje = ref("");
+const src = ref("")
 
 function openOverlay(dayObject) {
   if (unlockedDay.value < dayObject.day) return; // safety: niet klikken
@@ -262,9 +263,10 @@ function openOverlay(dayObject) {
   vakje.value = dayObject.vakje;
   height.value = dayObject.height;
   overlay.value = true;
+  src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(11);
+const unlockedDay = ref(12);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -315,6 +317,7 @@ const dayData = [
     text: "Eergister is Spotify wrapped weer uitgekomen. Hierbij vermeldt Spotify ook altijd welk genre jouw favoriet is. Nu heb ik al 3 jaar op rij ‘indie rock’ als favoriete genre en ik denk daarom dat het tijd is om mijn horizon te verbreden. Heb jij nou ook al drie jaar achter elkaar hetzelfde genre? Deze website biedt de ultieme kaart van álle muziekgenres die je maar kunt bedenken. Van bekende stijlen tot verborgen pareltjes waar je nog nooit van hebt gehoord….<br><br> *Scroll op je telefoon naar rechts om de kaart te kunnen zien*",
     link: "https://everynoise.com/engenremap.html",
     vakje: "cadeau",
+    src: "/images/cadeautje_open.png"
   },
   {
     day: 6,
@@ -344,7 +347,8 @@ const dayData = [
     date: "9 december",
     text: "Vandaag is het internationale technodag! Op deze mooie dag is het druilerig en bewolkt. Daarom begeef ik me in gedachten aan het zwembad, op een warme zomerdag, cocktail in de hand en de zon op mijn gezicht. Ik mis alleen nog iets.. Ah ja tuurlijk: Hierbij horen natuurlijk ook zomerse muziekjes! Daar past deze website met een old-school design perfect bij. Alhoewel de muziek op deze website niet perse techno is, en ik eigenlijk de website ook niet helemaal begrijp, hoop ik dat jullie hem leuk vinden.",
     link: "https://poolsuite.net",
-    vakje: "cadeau"
+    vakje: "cadeau",
+    src: "/images/cadeautje_open.png"
   },
   {
     day: 10,
@@ -364,8 +368,10 @@ const dayData = [
   {
     day: 12,
     date: "12 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Vandaag heb ik wat voor iedereen die gestopt is met social media en nu maar scrollt door de nos app, voor iedereen die van al dit nieuws zeer moedeloos wordt, en voor iedereen die verdrietig wordt van de korte dagen. We kunnen allemaal soms wel een beetje goed nieuws gebruiken. ",
+    link: "https://www.goodnewsnetwork.org/",
+    vakje: "cadeau",
+    src: "/images/krant.png"
   },
   {
     day: 13,
@@ -462,12 +468,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #A31D1D,
-      #ff4444,
-      #A31D1D,
-      #ff4444,
-      #A31D1D,
-      #ff4444);
+      #551C22,
+      #a02431,
+      #551C22,
+      #a02431,
+      #551C22,
+      #a02431);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);

@@ -24,7 +24,7 @@
         <VakjeDeur v-if="vakje === 'deur'" :link="link" :day="day" :height="height">
           <slot></slot>
         </VakjeDeur>
-        <Cadeau v-if="vakje === 'cadeau'" :link="link"></Cadeau>
+        <Cadeau v-if="vakje === 'cadeau'" :link="link" :src="src"></Cadeau>
 
       </section>
     </section>
@@ -48,6 +48,7 @@ const props = defineProps({
   link: String,
   vakje: String,
   height: String,
+  src: String
 });
 
 const mounted = ref(false);
