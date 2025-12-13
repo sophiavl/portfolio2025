@@ -122,7 +122,7 @@
         </button>
       </div>
       <div class="flex h-[9%] w-screen">
-        <button :disabled="unlockedDay < 12" id="glow-on-hover" @click="openOverlay(dayData[11])" :class="[
+        <button :disabled="unlockedDay < 12"  @click="openOverlay(dayData[11])" :class="[
           'w-[30%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 12
             ? 'bg-[#551C22]'
@@ -130,7 +130,7 @@
         ]">
           <p>12</p>
         </button>
-        <button :disabled="unlockedDay < 13" @click="openOverlay(dayData[12])" :class="[
+        <button :disabled="unlockedDay < 13" id="glow-on-hover" @click="openOverlay(dayData[12])" :class="[
           'w-[30%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 13
             ? 'bg-[#A31D1D]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(12);
+const unlockedDay = ref(13);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -376,8 +376,10 @@ const dayData = [
   {
     day: 13,
     date: "13 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Er zitten helaas maar 24 uur in de dag, en zelf heb ik altijd moeite met het verdelen van de tijd over alles wat ik wil doen. Hierbij is mijn telefoon mijn grootste vijand. Ik probeer hier toch wel wat minder tijd aan te besteden, deze website heeft me daar weer een beetje bij geholpen",
+    link: "https://neal.fun/where-does-the-day-go/",
+    vakje: 'deur',
+    height: "19rem"
   },
   {
     day: 14,
@@ -468,12 +470,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #551C22,
-      #a02431,
-      #551C22,
-      #a02431,
-      #551C22,
-      #a02431);
+      #A31D1D,
+#ea5050,
+      #A31D1D,
+      #ea5050,
+      #A31D1D,
+      #ea5050);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
