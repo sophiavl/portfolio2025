@@ -122,7 +122,7 @@
         </button>
       </div>
       <div class="flex h-[9%] w-screen">
-        <button :disabled="unlockedDay < 12"  @click="openOverlay(dayData[11])" :class="[
+        <button :disabled="unlockedDay < 12" @click="openOverlay(dayData[11])" :class="[
           'w-[30%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 12
             ? 'bg-[#551C22]'
@@ -130,7 +130,7 @@
         ]">
           <p>12</p>
         </button>
-        <button :disabled="unlockedDay < 13" id="glow-on-hover" @click="openOverlay(dayData[12])" :class="[
+        <button :disabled="unlockedDay < 13" @click="openOverlay(dayData[12])" :class="[
           'w-[30%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 13
             ? 'bg-[#A31D1D]'
@@ -139,7 +139,7 @@
           <p>13</p>
         </button>
 
-        <button :disabled="unlockedDay < 14" @click="openOverlay(dayData[13])" :class="[
+        <button :disabled="unlockedDay < 14" id="glow-on-hover" @click="openOverlay(dayData[13])" :class="[
           'w-[40%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 14
             ? 'bg-[#1B4D3E]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(13);
+const unlockedDay = ref(14);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -384,8 +384,9 @@ const dayData = [
   {
     day: 14,
     date: "14 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Hier wat vermaak voor jullie zondag, ik ben benieuwd of er iemand is die dit weet uit te spelen(en of het uberhaupt uit te spelen is). Veel plezier!",
+    link: "https://neal.fun/infinite-craft/",
+    vakje: "scratch"
   },
   {
     day: 15,
@@ -470,12 +471,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #A31D1D,
-#ea5050,
-      #A31D1D,
-      #ea5050,
-      #A31D1D,
-      #ea5050);
+      #1B4D3E,
+      #2f9576,
+      #1B4D3E,
+      #2f9576,
+      #1B4D3E,
+      #2f9576);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
