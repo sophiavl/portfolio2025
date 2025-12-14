@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="pt-12">
 
         <img class="cadeau" v-if="!presentOpened" :class="{ bounce: animate }" @click="playAnimation"
             src="/public/images/cadeautje_dicht.png" alt="cadeautje" />

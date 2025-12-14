@@ -139,7 +139,7 @@
           <p>13</p>
         </button>
 
-        <button :disabled="unlockedDay < 14" id="glow-on-hover" @click="openOverlay(dayData[13])" :class="[
+        <button :disabled="unlockedDay < 14" @click="openOverlay(dayData[13])" :class="[
           'w-[40%] h-full flex justify-center items-center text-xl ',
           unlockedDay >= 14
             ? 'bg-[#1B4D3E]'
@@ -149,13 +149,13 @@
         </button>
       </div>
       <div class="flex h-[20%] w-screen">
-        <button :disabled="unlockedDay < 15" @click="openOverlay(dayData[14])" :class="[
+        <button :disabled="unlockedDay < 15" id="glow-on-hover" @click="openOverlay(dayData[14])" :class="[
           'w-3/5 h-full flex justify-center items-center text-xl ',
           unlockedDay >= 15
-            ? 'bg-[#1B4D3E]'
-            : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
+            ? 'bg-[#d90479]'
+            : 'bg-[#d90479]/40 cursor-not-allowed opacity-70',
         ]">
-          <p>15</p>
+          <p class="verjaardagstext">15</p>
         </button>
         <div class="flex flex-col w-1/4">
           <button :disabled="unlockedDay < 16" @click="openOverlay(dayData[15])" :class="[
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(14);
+const unlockedDay = ref(15);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -391,8 +391,10 @@ const dayData = [
   {
     day: 15,
     date: "15 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Het is mijn verjaardag vandaag! Deze dag roept natuurlijk om een écht goede link voor de adventkalender. Bij deze daarom een van de beste youtubekanalen die er bestaat. Ookal is elk filmpje rond de 8 minuten, ben je zo uren verder met kijken. Kijk en geniet!",
+    link: "https://youtu.be/RVBfsbeTBac?si=tmLMQEl9BIvxnOf3",
+    vakje: "cadeau",
+    src: "/images/youtube.png"
   },
   {
     day: 16,
@@ -471,12 +473,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #1B4D3E,
-      #2f9576,
-      #1B4D3E,
-      #2f9576,
-      #1B4D3E,
-      #2f9576);
+      rgb(245, 23, 138),
+      #43bc98,
+      #30ffdc,
+      #ff4242,
+      #7970ff,
+      #ff8f33);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
@@ -600,6 +602,11 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+
+.verjaardagstext {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 @media only screen and (max-height: 750px) {
