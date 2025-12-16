@@ -1,22 +1,11 @@
 <template>
-  <div class="wrapper" :style="{height: height}">
-    <div
-      class="content"
-      ref="isOpen"
-    >
-      <a
-        id="link"
-        :href="link"
-        target="_blank"
-        ><p class="text-center"><u>Klik!</u></p></a
-      >
+  <div class="wrapper" :style="{ height: height }">
+    <div class="content" ref="isOpen">
+      <a id="link" :href="link" target="_blank">
+        <p class="text-center"><u>Klik!</u></p>
+      </a>
     </div>
-    <div
-      class="front"
-      :style="{height: height}"
-      ref="doorRef"
-      @click="openDoor"
-    >
+    <div class="front" :style="{ height: height }" ref="doorRef" @click="openDoor">
       <h1 class="vakje">{{ day }}</h1>
     </div>
   </div>
@@ -28,7 +17,7 @@ import gsap from "gsap";
 const props = defineProps({
   day: Number,
   link: String,
-  height: {String, default: "7rem"}
+  height: { String, default: "7rem" }
 });
 
 const isOpen = ref(false);
@@ -85,9 +74,11 @@ p {
   font-family: "InstrumentSerif";
   font-weight: bold;
 }
+
 .front {
   position: absolute;
-  inset: 0; /* neemt exact alle ruimte in */
+  inset: 0;
+  /* neemt exact alle ruimte in */
   background-color: #a31d1d;
   display: flex;
   justify-content: center;
@@ -128,9 +119,11 @@ p {
     width: 12rem;
     height: 8rem;
   }
+
   .front {
     width: 12rem;
   }
+
   p {
     font-size: 0.75rem !important;
   }
@@ -140,26 +133,30 @@ p {
   p {
     font-size: 1rem !important;
   }
+
   .front {
     left: 13px;
     width: 18rem;
   }
+
   .wrapper {
     width: 18rem;
     height: 8rem;
   }
+
   .content {
     left: 1rem;
   }
 }
-@media only screen and (min-width: 660px) and (max-width: 900px) {
-}
+
+@media only screen and (min-width: 660px) and (max-width: 900px) {}
 
 @media only screen and (min-width: 900px) {
   content {
     left: 0;
   }
 }
+
 @media only screen and (min-width: 1250px) {
   p {
     font-size: 1.1rem;
