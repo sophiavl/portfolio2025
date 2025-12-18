@@ -166,7 +166,7 @@
           ]">
             <p>16</p>
           </button>
-          <button :disabled="unlockedDay < 17" id="glow-on-hover" @click="openOverlay(dayData[16])" :class="[
+          <button :disabled="unlockedDay < 17" @click="openOverlay(dayData[16])" :class="[
             'h-1/2 flex justify-center items-center text-xl ',
             unlockedDay >= 17
               ? 'bg-[#3B7B61]'
@@ -175,7 +175,7 @@
             <p>17</p>
           </button>
         </div>
-        <button :disabled="unlockedDay < 18" @click="openOverlay(dayData[17])" :class="[
+        <button :disabled="unlockedDay < 18" id="glow-on-hover" @click="openOverlay(dayData[17])" :class="[
           'w-1/5 h-full flex justify-center items-center text-xl ',
           unlockedDay >= 18
             ? 'bg-[#A31D1D]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(17);
+const unlockedDay = ref(18);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -406,16 +406,17 @@ const dayData = [
   {
     day: 17,
     date: "17 december",
-    text: "Wait, how did we get here?<br><br><br><br>",
-    link: "https://www.youtube.com/watch?v=xuCn8ux2gbs",
+    text: "Wait, how did we get here?",
+    link: "https://www.youtube.com/watch?v=n9xQTEHebpA",
     vakje: 'deur',
     height: "22rem"
   },
   {
     day: 18,
     date: "18 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Mijn afstudeerproject doe ik in samenwerking met het Literatuurmuseum. Zij hebben een online museum gemaakt met allerlei online exposities en artikelen. Of je nu specifieke informatie over je favoriete schrijver of schrijfster wil vinden of wil dwalen tussen de literaire meesterwerken, er is altijd wel iets te vinden wat je interessant vindt.<br><br>",
+    link: "https://literatuurmuseum.nl/nl/ontdek-online/literatuurlab",
+    vakje: "scratch"
   },
   {
     day: 19,
@@ -476,12 +477,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #3B7B61,
-      #5fcea2,
-      #3B7B61,
-      #5fcea2,
-      #3B7B61,
-      #5fcea2);
+      #A31D1D,
+      #ec3939,
+      #A31D1D,
+      #ec3939,
+      #A31D1D,
+      #ec3939);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
