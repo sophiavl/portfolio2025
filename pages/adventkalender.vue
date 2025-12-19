@@ -175,7 +175,7 @@
             <p>17</p>
           </button>
         </div>
-        <button :disabled="unlockedDay < 18" id="glow-on-hover" @click="openOverlay(dayData[17])" :class="[
+        <button :disabled="unlockedDay < 18" @click="openOverlay(dayData[17])" :class="[
           'w-1/5 h-full flex justify-center items-center text-xl ',
           unlockedDay >= 18
             ? 'bg-[#A31D1D]'
@@ -186,7 +186,7 @@
       </div>
       <div class="flex h-[10%] w-screen">
         <div class="flex flex-col h-full w-1/3">
-          <button :disabled="unlockedDay < 19" @click="openOverlay(dayData[18])" :class="[
+          <button :disabled="unlockedDay < 19" id="glow-on-hover" @click="openOverlay(dayData[18])" :class="[
             'h-1/2 flex justify-center items-center text-xl ',
             unlockedDay >= 19
               ? 'bg-[#3B7B61]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(18);
+const unlockedDay = ref(19);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -421,8 +421,9 @@ const dayData = [
   {
     day: 19,
     date: "19 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "",
+    link: "https://puginarug.com/",
+    vakje: "scratch"
   },
   {
     day: 20,
@@ -477,12 +478,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #A31D1D,
-      #ec3939,
-      #A31D1D,
-      #ec3939,
-      #A31D1D,
-      #ec3939);
+      #3B7B61,
+      #58c89b,
+      #3B7B61,
+      #58c89b,
+      #3B7B61,
+      #58c89b);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
