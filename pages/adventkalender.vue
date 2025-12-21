@@ -194,7 +194,7 @@
           ]">
             <p>19</p>
           </button>
-          <button :disabled="unlockedDay < 20" id="glow-on-hover" @click="openOverlay(dayData[19])" :class="[
+          <button :disabled="unlockedDay < 20" @click="openOverlay(dayData[19])" :class="[
             'h-1/2 flex justify-center items-center text-xl ',
             unlockedDay >= 20
               ? 'bg-[#A31D1D]'
@@ -203,7 +203,7 @@
             <p>20</p>
           </button>
         </div>
-        <button :disabled="unlockedDay < 21" @click="openOverlay(dayData[20])" :class="[
+        <button :disabled="unlockedDay < 21" id="glow-on-hover" @click="openOverlay(dayData[20])" :class="[
           'h-full w-1/3 flex justify-center items-center text-xl ',
           unlockedDay >= 21
             ? 'bg-[#551C22]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(20);
+const unlockedDay = ref(21);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -338,7 +338,7 @@ const dayData = [
   {
     day: 8,
     date: "8 december",
-    text: "Met een adventkalender tel je af tot kerst, en kerst draait natuurlijk om lief zijn voor de mensen om je heen. Ook voor mensen die je niet kent. Daarom kun je op deze website een berichtje achterlaten voor de volgende bezoeker. In ruil daarvoor krijg jij natuurlijk ook een berichtje!",
+    text: "Met een adventkalender tel je af tot kerst, en kerst draait natuurlijk om lief zijn voor de mensen om je heen. Ook voor mensen die je niet kent. Daarom kun je op deze website een berichtje achterlaten voor de volgende bezoeker. In ruil daarvoor krijg jij natuurlijk ook een berichtje!<br>",
     link: "https://www.dearnextvisitor.com/ ",
     vakje: 'scratch'
   },
@@ -436,8 +436,10 @@ const dayData = [
   {
     day: 21,
     date: "21 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Ik denk dat iedereen het probleem kent van een veel te volle e-mail inbox met allerlei random mails van websites die je niet eens meer herkent. Bij elke website moet je wel een e-mail invoeren, ookal weet je dat je dat account nooit meer zal gaan gebruiken.<br> Deze website geeft je een tijdelijk e-mailadres waarin je een verificatiecode kunt ontvangen. Zo zal je niet oneindig mailtjes blijven ontvangen van elke random website die je maar één keer nodig had.<br><br><br>",
+    link: "https://temp-mail.org/",
+    vakje: 'deur',
+    height: '16rem'
   },
   {
     day: 22,
@@ -480,12 +482,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #A31D1D,
-      #e13030,
-      #A31D1D,
-      #e13030,
-      #A31D1D,
-      #e13030);
+      #551C22,
+      #c22b3a,
+      #551C22,
+      #c22b3a,
+      #551C22,
+      #c22b3a);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
