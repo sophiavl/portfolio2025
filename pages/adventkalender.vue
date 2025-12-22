@@ -211,7 +211,7 @@
         ]">
           <p>21</p>
         </button>
-        <button :disabled="unlockedDay < 22" id="glow-on-hover" @click="openOverlay(dayData[21])" :class="[
+        <button :disabled="unlockedDay < 22" @click="openOverlay(dayData[21])" :class="[
           'h-full w-1/3 flex justify-center items-center text-xl ',
           unlockedDay >= 22
             ? 'bg-[#1B4D3E]'
@@ -221,7 +221,7 @@
         </button>
       </div>
       <div class="flex h-[10%] w-screen">
-        <button :disabled="unlockedDay < 23" @click="openOverlay(dayData[22])" :class="[
+        <button :disabled="unlockedDay < 23" id="glow-on-hover" @click="openOverlay(dayData[22])" :class="[
           'h-full w-1/2 flex justify-center items-center text-xl  ',
           unlockedDay >= 23
             ? 'bg-[#1B4D3E]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(22);
+const unlockedDay = ref(23);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -452,8 +452,10 @@ const dayData = [
   {
     day: 23,
     date: "23 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Waarom doe je iets goeds voor een ander, zonder er iets voor terug te krijgen? Hoe los je een koude oorlog op? Waarom likken antilopen elkaar? Speltheorie is een aparte tak van wiskunde, maar eigenlijk komen we het dagelijks tegen. Het volgende filmpje legt alle aspecten uit, het account is misschien bij jullie bekend. Veel kijkplezier!!<br><br>",
+    link: "https://youtu.be/mScpHTIi-kM?si=7hDxfXQsD1gxsHKK",
+    vakje: "cadeau",
+    src: "/images/youtube.png"
   },
   {
     day: 24,
