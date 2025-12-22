@@ -203,7 +203,7 @@
             <p>20</p>
           </button>
         </div>
-        <button :disabled="unlockedDay < 21" id="glow-on-hover" @click="openOverlay(dayData[20])" :class="[
+        <button :disabled="unlockedDay < 21" @click="openOverlay(dayData[20])" :class="[
           'h-full w-1/3 flex justify-center items-center text-xl ',
           unlockedDay >= 21
             ? 'bg-[#551C22]'
@@ -211,7 +211,7 @@
         ]">
           <p>21</p>
         </button>
-        <button :disabled="unlockedDay < 22" @click="openOverlay(dayData[21])" :class="[
+        <button :disabled="unlockedDay < 22" id="glow-on-hover" @click="openOverlay(dayData[21])" :class="[
           'h-full w-1/3 flex justify-center items-center text-xl ',
           unlockedDay >= 22
             ? 'bg-[#1B4D3E]'
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(21);
+const unlockedDay = ref(22);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -444,8 +444,10 @@ const dayData = [
   {
     day: 22,
     date: "22 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "Ik denk dat veel mensen deze website al kennen, maar hij is het zeker waard om hier tussen te zetten. De maker van deze website is een surfer die leeft van vrijwillige bijdrage en hiervan speciaalbiertjes koopt. Ondertussen houdt hij deze website bij waar je je email in kunt voeren om te zien of deze is betrokken bij een datalek.<br><br><br>",
+    link: "https://haveibeenpwned.com/",
+    vakje: "deur",
+    height: "13rem"
   },
   {
     day: 23,
@@ -482,12 +484,12 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #551C22,
-      #c22b3a,
-      #551C22,
-      #c22b3a,
-      #551C22,
-      #c22b3a);
+      #1B4D3E,
+      #3ca888,
+      #1B4D3E,
+      #3ca888,
+      #1B4D3E,
+      #3ca888);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
   filter: blur(4px);
