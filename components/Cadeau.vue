@@ -4,7 +4,14 @@
         <img class="cadeau" v-if="!presentOpened" :class="{ bounce: animate }" @click="playAnimation"
             src="/public/images/cadeautje_dicht.png" alt="cadeautje" />
         <div v-else class="relative">
-            <img class="cadeau-open" :src="props.src" alt="cadeautje open" @click="openLink" />
+            <img v-if="foto" class="cadeau-open" :src="props.src" alt="cadeautje open" @click="openLink" />
+            <section v-else>
+                <p class="songtitle">Koesjchaapgeit | Max ft. Jonas</p>
+                <audio controls>
+
+                    <source src="/public/koesjchaapgeit.mp3" type="audio/mpeg">
+                </audio>
+            </section>
         </div>
 
 
@@ -21,7 +28,8 @@ const clicked = ref(0);
 
 const props = defineProps({
     link: { type: String, default: "https://example.com" },
-    src: { type: String }
+    src: { type: String },
+    foto: Boolean
 
 });
 
@@ -61,6 +69,13 @@ function openLink() {
     height: auto;
     transform: translateX(-10px);
     cursor: pointer;
+}
+
+.songtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    padding-bottom: 1rem;
 }
 
 .bounce {

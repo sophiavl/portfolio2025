@@ -6,7 +6,7 @@
     </div>
 
     <Overlay v-if="overlay" :date="date" :text="text" :link="link" :day="day" :vakje="vakje" :height="height" :src="src"
-      @closeOverlay="overlay = false"></Overlay>
+      :foto="foto" @closeOverlay="overlay = false"></Overlay>
     <section v-if="mounted" class="h-[96.5%] w-screen border-black">
       <div class="flex h-[10%] w-screen">
         <button :disabled="unlockedDay < 1" @click="openOverlay(dayData[0])" :class="[
@@ -155,7 +155,7 @@
             ? 'bg-[#1B4D3E]'
             : 'bg-[#1B4D3E]/40 cursor-not-allowed opacity-70',
         ]">
-          <p class="verjaardagstext">15</p>
+          <p>15</p>
         </button>
         <div class="flex flex-col w-1/4">
           <button :disabled="unlockedDay < 16" @click="openOverlay(dayData[15])" :class="[
@@ -221,7 +221,7 @@
         </button>
       </div>
       <div class="flex h-[10%] w-screen">
-        <button :disabled="unlockedDay < 23" id="glow-on-hover" @click="openOverlay(dayData[22])" :class="[
+        <button :disabled="unlockedDay < 23" @click="openOverlay(dayData[22])" :class="[
           'h-full w-1/2 flex justify-center items-center text-xl  ',
           unlockedDay >= 23
             ? 'bg-[#1B4D3E]'
@@ -229,13 +229,13 @@
         ]">
           <p>23</p>
         </button>
-        <button :disabled="unlockedDay < 24" @click="openOverlay(dayData[23])" :class="[
+        <button :disabled="unlockedDay < 24" id="glow-on-hover" @click="openOverlay(dayData[23])" :class="[
           'h-full w-1/2 flex justify-center items-center text-xl ',
           unlockedDay >= 24
-            ? 'bg-[#A31D1D]'
-            : 'bg-[#A31D1D]/40 cursor-not-allowed opacity-70',
+            ? 'bg-[#d30404]'
+            : 'bg-[#FFF]/40 cursor-not-allowed opacity-70',
         ]">
-          <p>24</p>
+          <p class="verjaardagstext">24</p>
         </button>
       </div>
     </section>
@@ -266,7 +266,7 @@ function openOverlay(dayObject) {
   src.value = dayObject.src
 }
 const overlay = ref(false);
-const unlockedDay = ref(23);
+const unlockedDay = ref(24);
 const mounted = ref(false);
 
 onMounted(() => {
@@ -317,7 +317,8 @@ const dayData = [
     text: "Eergister is Spotify wrapped weer uitgekomen. Hierbij vermeldt Spotify ook altijd welk genre jouw favoriet is. Nu heb ik al 3 jaar op rij ‘indie rock’ als favoriete genre en ik denk daarom dat het tijd is om mijn horizon te verbreden. Heb jij nou ook al drie jaar achter elkaar hetzelfde genre? Deze website biedt de ultieme kaart van álle muziekgenres die je maar kunt bedenken. Van bekende stijlen tot verborgen pareltjes waar je nog nooit van hebt gehoord….<br><br> *Scroll op je telefoon naar rechts om de kaart te kunnen zien*",
     link: "https://everynoise.com/engenremap.html",
     vakje: "cadeau",
-    src: "/images/cadeautje_open.png"
+    src: "/images/cadeautje_open.png",
+    foto: true
   },
   {
     day: 6,
@@ -348,7 +349,9 @@ const dayData = [
     text: "Vandaag is het internationale technodag! Op deze mooie dag is het druilerig en bewolkt. Daarom begeef ik me in gedachten aan het zwembad, op een warme zomerdag, cocktail in de hand en de zon op mijn gezicht. Ik mis alleen nog iets.. Ah ja tuurlijk: Hierbij horen natuurlijk ook zomerse muziekjes! Daar past deze website met een old-school design perfect bij. Alhoewel de muziek op deze website niet perse techno is, en ik eigenlijk de website ook niet helemaal begrijp, hoop ik dat jullie hem leuk vinden.",
     link: "https://poolsuite.net",
     vakje: "cadeau",
-    src: "/images/cadeautje_open.png"
+    src: "/images/cadeautje_open.png",
+    foto: true
+
   },
   {
     day: 10,
@@ -371,7 +374,9 @@ const dayData = [
     text: "Vandaag heb ik wat voor iedereen die gestopt is met social media en nu maar scrollt door de nos app, voor iedereen die van al dit nieuws zeer moedeloos wordt, en voor iedereen die verdrietig wordt van de korte dagen. We kunnen allemaal soms wel een beetje goed nieuws gebruiken. ",
     link: "https://www.goodnewsnetwork.org/",
     vakje: "cadeau",
-    src: "/images/krant.png"
+    src: "/images/krant.png",
+    foto: true
+
   },
   {
     day: 13,
@@ -394,7 +399,9 @@ const dayData = [
     text: "Het is mijn verjaardag vandaag! Deze dag roept natuurlijk om een écht goede link voor de adventkalender. Bij deze daarom een van de beste youtubekanalen die er bestaat. Ookal is elk filmpje rond de 8 minuten, ben je zo uren verder met kijken. Kijk en geniet!",
     link: "https://youtu.be/RVBfsbeTBac?si=tmLMQEl9BIvxnOf3",
     vakje: "cadeau",
-    src: "/images/youtube.png"
+    src: "/images/youtube.png",
+    foto: true
+
   },
   {
     day: 16,
@@ -431,7 +438,9 @@ const dayData = [
     text: "Puzzels!",
     link: "https://sliding.toys/",
     vakje: "cadeau",
-    src: "/images/puzzle.png"
+    src: "/images/puzzle.png",
+    foto: true
+
   },
   {
     day: 21,
@@ -455,13 +464,17 @@ const dayData = [
     text: "Waarom doe je iets goeds voor een ander, zonder er iets voor terug te krijgen? Hoe los je een koude oorlog op? Waarom likken antilopen elkaar? Speltheorie is een aparte tak van wiskunde, maar eigenlijk komen we het dagelijks tegen. Het volgende filmpje legt alle aspecten uit, het account is misschien bij jullie bekend. Veel kijkplezier!!<br><br>",
     link: "https://youtu.be/mScpHTIi-kM?si=7hDxfXQsD1gxsHKK",
     vakje: "cadeau",
-    src: "/images/youtube.png"
+    src: "/images/youtube.png",
+    foto: true
+
   },
   {
     day: 24,
     date: "24 december",
-    text: "Tekst dag 3...",
-    link: "https://example.com",
+    text: "24 december, alweer de laatste dag! De afgelopen 23 dagen heb ik elk hoekje van het internet afgespeurd op zoek naar leuke onderbrekingen van jullie dagelijks leven. Van puzzels tot filmpjes en van nutteloze dingen tot websites waar je hopelijk echt wat aan hebt. Ik hoop dat jullie hebben genoten.<br><br> Vandaag ga ik adventkalender afsluiten en de kerst aftrappen met een knaller van een kerstlied. Dit lied is gemaakt door de enige echte Max ft. Jonas. Laat je meeslepen door diepe teksten over vriendschap gedragen door een onmiskenbaar opzwepende beat.",
+    vakje: "cadeau",
+    foto: false,
+
   },
 ];
 </script>
@@ -486,15 +499,21 @@ const dayData = [
   height: 100%;
 
   background: linear-gradient(-45deg,
-      #1B4D3E,
-      #3ca888,
-      #1B4D3E,
-      #3ca888,
-      #1B4D3E,
-      #3ca888);
+      #A31D1D,
+      #ffbaba,
+      #1b4d3e,
+      #1b4d3e,
+      #A31D1D,
+      #A31D1D,
+      #ffbaba,
+      #1b4d3e,
+      #1b4d3e,
+      #A31D1D,
+      #A31D1D,
+      #ffbaba,
+      #1b4d3e);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite reverse;
-  filter: blur(4px);
   z-index: -1;
   /* glow onder de content */
   opacity: 1;
@@ -618,7 +637,7 @@ a,
 }
 
 .verjaardagstext {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
