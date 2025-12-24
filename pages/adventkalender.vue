@@ -471,7 +471,7 @@ const dayData = [
   {
     day: 24,
     date: "24 december",
-    text: "24 december, alweer de laatste dag! De afgelopen 23 dagen heb ik elk hoekje van het internet afgespeurd op zoek naar leuke onderbrekingen van jullie dagelijks leven. Van puzzels tot filmpjes en van nutteloze dingen tot websites waar je hopelijk echt wat aan hebt. Ik hoop dat jullie hebben genoten.<br><br> Vandaag ga ik adventkalender afsluiten en de kerst aftrappen met een knaller van een kerstlied. Dit lied is gemaakt door de enige echte Max ft. Jonas. Laat je meeslepen door diepe teksten over vriendschap gedragen door een onmiskenbaar opzwepende beat.",
+    text: "24 december, alweer de laatste dag! De afgelopen 23 dagen heb ik elk hoekje van het internet afgespeurd op zoek naar leuke onderbrekingen van jullie dagelijks leven. Van puzzels tot filmpjes en van nutteloze dingen tot websites waar je hopelijk echt wat aan hebt. Ik hoop dat jullie hebben genoten.<br><br> Vandaag ga ik adventkalender afsluiten en de kerst aftrappen met een knaller van een kerstlied. Dit lied is gemaakt door de enige echte Max ft. Jonas. Laat je meeslepen door diepe teksten over vriendschap gedragen door een onmiskenbaar opzwepende beat.<br><br> Fijne Kerst allemaal!",
     vakje: "cadeau",
     foto: false,
 
