@@ -1,20 +1,16 @@
 <template>
     <div class="pt-12">
-
         <img class="cadeau" v-if="!presentOpened" :class="{ bounce: animate }" @click="playAnimation"
             src="/public/images/cadeautje_dicht.png" alt="cadeautje" />
         <div v-else class="relative">
-            <img v-if="foto" class="cadeau-open" :src="props.src" alt="cadeautje open" @click="openLink" />
-            <section v-else>
+            <section v-if="!foto">
                 <p class="songtitle">Koesjchaapgeit | Max ft. Jonas</p>
                 <audio controls>
-
                     <source src="/public/koesjchaapgeit.mp3" type="audio/mpeg">
                 </audio>
             </section>
+            <img v-else class="cadeau-open" :src="props.src" alt="cadeautje open" @click="openLink" />
         </div>
-
-
     </div>
 
 </template>

@@ -253,6 +253,7 @@ const day = ref(null);
 const height = ref("");
 const vakje = ref("");
 const src = ref("")
+const foto = ref("")
 
 function openOverlay(dayObject) {
   if (unlockedDay.value < dayObject.day) return; // safety: niet klikken
@@ -264,6 +265,7 @@ function openOverlay(dayObject) {
   height.value = dayObject.height;
   overlay.value = true;
   src.value = dayObject.src
+  foto.value = dayObject.foto
 }
 const overlay = ref(false);
 const unlockedDay = ref(24);
@@ -318,7 +320,7 @@ const dayData = [
     link: "https://everynoise.com/engenremap.html",
     vakje: "cadeau",
     src: "/images/cadeautje_open.png",
-    foto: true
+    foto: "true"
   },
   {
     day: 6,
@@ -350,7 +352,7 @@ const dayData = [
     link: "https://poolsuite.net",
     vakje: "cadeau",
     src: "/images/cadeautje_open.png",
-    foto: true
+    foto: "true"
 
   },
   {
