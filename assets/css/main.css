@@ -11,20 +11,34 @@ body {
   background-color: var(--color-light);
   color: var(--color-darkPink);
   height: 100vh;
+  overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair";
+  src: url("/fonts/Playfair_9pt-SemiBold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cinzel";
+  src: url("/fonts/Cinzel-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
   font-family: "InstrumentSerif";
   src: url("/fonts/InstrumentSerif-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "CothamSans";
-  src: url("/fonts/CothamSans.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Light.ttf") format("truetype");
@@ -56,25 +70,6 @@ body {
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Phudu";
-  src: url("/fonts/Phudu-Black.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Phudu";
-  src: url("/fonts/Phudu-SemiBold.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Phudu";
-  src: url("/fonts/Phudu-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
 @font-face {
   font-family: "Gelion";
   src: url("/fonts/Gelion Light.ttf") format("truetype");

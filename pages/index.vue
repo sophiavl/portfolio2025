@@ -1,28 +1,10 @@
 <template>
-  <section
-    ref="scroller"
-    class="snap-y snap-mandatory justify-center"
-  >
-    <!-- <Nav></Nav> -->
-  <Hero
-      ref="hero"
-      class="snap-start h-lvh z-0"
-    ></Hero>
-    <!-- 
-    <Portfolio
-      ref="portfolio"
-      class="snap-start h-lvh"
-    ></Portfolio> -->
+  <section class="justify-center">
+    <Adventkalender></Adventkalender>
   </section>
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
-const scroller = ref(null);
+import Adventkalender from "./adventkalender.vue";
 </script>
-
-<style scoped></style>

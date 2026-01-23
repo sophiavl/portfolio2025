@@ -4,17 +4,26 @@
 
 @layer base {
   h1 {
-    @apply text-[2.2rem] font-medium font-phudu;
+    @apply font-cinzel;
+    font-size: clamp(1.7rem, 6.9vw, 11rem);
+    font-weight: 200;
+    letter-spacing: clamp(0.12em, 1vw, 0.02em);
+    color: var(--color-darkPink);
   }
 
   h2 {
-    @apply text-[2.5rem] font-medium font-phudu;
+    @apply font-playfair;
+    font-size: clamp(1.1rem, 4vw, 3rem);
+    font-weight: 200;
+    color: var(--color-darkPink);
   }
   h3 {
-    @apply text-[1.7rem] font-medium font-phudu;
+    @apply font-playfair;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
   }
   h4 {
-    @apply text-[1.2rem] font-medium font-phudu;
+    @apply text-[1.2rem] font-medium font-playfair;
   }
 
   p {
@@ -22,27 +31,15 @@
   }
 
   @media (min-width: 460px) {
-    h1 {
-      @apply text-[2.7rem];
-    }
   }
 
   @media (min-width: 660px) {
-    h1 {
-      @apply text-[3.9rem];
-    }
     p {
       @apply text-[1.1rem];
-    }
-    h2 {
-      @apply text-[3rem];
     }
   }
 
   @media (min-width: 900px) {
-    h1 {
-      @apply text-[4.5rem];
-    }
   }
 
   @media (min-width: 1250px) {
@@ -55,10 +52,6 @@
   }
 
   @media (min-width: 1495px) {
-    h1 {
-      @apply text-[10rem];
-    }
-
     h4 {
       @apply text-[1.6rem];
     }
@@ -69,10 +62,6 @@
   }
 
   @media (min-width: 1650px) {
-    h1 {
-      @apply text-[10rem];
-    }
-
     p {
       @apply text-[1.3rem];
     }

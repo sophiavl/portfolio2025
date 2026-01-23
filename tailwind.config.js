@@ -12,6 +12,8 @@ export default {
         phudu: ["Phudu", "sans-serif"],
         gelion: ["Gelion", "sans-serif"],
         lora: ["Lora", "serif"],
+        cinzel: ["Cinzel", "serif"],
+        playfair: ["Playfair", "serif"],
       },
     },
     screens: {
